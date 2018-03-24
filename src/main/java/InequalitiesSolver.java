@@ -5,6 +5,7 @@ import java.util.Stack;
 public class InequalitiesSolver {
     public static InequalitiesSolver instance = new InequalitiesSolver();
     private static KernelLink kernelLink;
+    private Stack<MLTK> stack = new Stack<MLTK>();
 
     private InequalitiesSolver(){
         if (kernelLink == null){
@@ -17,35 +18,66 @@ public class InequalitiesSolver {
         }
     }
 
-    public void solveInequalities(int input_number, String constraint){
-        solveInequalities(convertToReduceFormula(input_number, constraint));
+    public String solveInequalities(int input_number, String constraint){
+        return solveInequalities(convertToReduceFormula(input_number, constraint));
     }
 
-    public void solveInequalities(String formula){
+    public String solveInequalities(String formula){
+        System.out.println("Reduce Formula: " + formula);
 
+        stack.clear();
+        StringBuilder sb = new StringBuilder();
         try {
             kernelLink.evaluate(formula);
             kernelLink.waitForAnswer();
-            while(true){
+            do {
                 int type = kernelLink.getType();
                 if(type == 70){
-                    MLFunction function = kernelLink.getFunction();
-                    System.out.println(type + ": " + function.name + ", " + function.argCount);
+                    sb.append(processFunction(kernelLink.getFunction()));
                 }else if(type == 35){
-                    System.out.println(type + ": " + kernelLink.getSymbol());
+                    sb.append(processSymbol(kernelLink.getSymbol()));
                 }else if(type == 43){
-                    System.out.println(type + ": " + kernelLink.getInteger());
+                    sb.append(processNumerical(kernelLink.getInteger()));
                 }else if(type == 42){
-                    System.out.println(type + ": " + kernelLink.getDouble());
+                    sb.append(processNumerical(kernelLink.getDouble()));
                 }else{
-                    System.out.println("New type " + type);
+                    kernelLink.discardAnswer();
+                    stack.clear();
+                    System.out.println("Unexpected Type: " + type);
                 }
-            }
+            }while (true);
         } catch (MathLinkException e) {
             System.out.println("MathLinkException occurred: " + e.getMessage());
-        } finally {
-            kernelLink.close();
         }
+
+        return sb.length() == 0 ? "Impossible" : sb.toString();
+    }
+
+    public void close(){
+        kernelLink.close();
+    }
+
+    private String processFunction(MLFunction function){
+        System.out.println("Function: " + function.name + ", " + function.argCount);
+        return "";
+    }
+
+    private String processSymbol(String symbol){
+        if(symbol.equals("False"))
+            return "";
+
+        System.out.println("Symbol: " + symbol);
+        return "";
+    }
+
+    private String processNumerical(int numerical){
+        System.out.println("Numerical: " + numerical);
+        return "";
+    }
+
+    private String processNumerical(double numerical){
+        System.out.println("Numerical: " + numerical);
+        return "";
     }
 
     private String convertToReduceFormula(int input_number, String constraint){

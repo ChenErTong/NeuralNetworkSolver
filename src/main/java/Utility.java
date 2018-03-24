@@ -15,5 +15,7 @@ public class Utility {
         SYMBOLS.put("Or", "||");
         SYMBOLS.put("Less", "<");
         SYMBOLS.put("Greater", ">");
+        SYMBOLS.put("LessEqual", "<=");
+        SYMBOLS.put("GreaterEqual", ">=");
     }
 }
