@@ -6,6 +6,12 @@ public class Solution {
     private String[] constraints;
     private String constraint;
 
+    public Solution(int in, String o, String c){
+        input_number = in;
+        objective = o;
+        constraint = c;
+    }
+
     public Solution(double[] ob, List<double[]> cons){
         input_number = ob.length - 1;
         objective = convertObjective(ob);

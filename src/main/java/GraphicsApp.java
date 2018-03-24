@@ -1,73 +1,33 @@
 import com.wolfram.jlink.*;
+
+import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 
-public class GraphicsApp extends Frame {
-    private static String path = "E:\\Wolfram Research\\Mathematica\\11.2\\mathkernel.exe";
+public class GraphicsApp extends JFrame {
+    private KernelLink kernelLink;
+    private MathCanvas mathCanvas;
 
-    static GraphicsApp app;
-    static KernelLink ml;
+    private final int X = 200;
+    private final int Y = 100;
+    private final int WIDTH = 800;
+    private final int HEIGHT = 600;
 
-    MathCanvas mathCanvas;
-    TextArea inputTextArea;
-    Button evalButton;
-    Checkbox useFEButton;
-    Checkbox graphicsButton;
-    Checkbox typesetButton;
+    public GraphicsApp(KernelLink kl) {
+        kernelLink = kl;
 
-    public static void main(String[] argv) {
-        try {
-            ml = connect();
-            ml.discardAnswer();
-        } catch (MathLinkException e) {
-            System.out.println("An error occurred connecting to the kernel.");
-            if (ml != null)
-                ml.close();
-            return;
-        }
-        app = new GraphicsApp();
-
-        try {
-            ml.evaluate("RegionPlot[x^2 + y^3 < 2, {x, -2, 2}, {y, -2, 2}]");
-        } catch (MathLinkException e) {
-            System.out.println("An error occurred connecting to the kernel.");
-            if (ml != null)
-                ml.close();
-            return;
-        }
-    }
-
-    public GraphicsApp() {
         setLayout(null);
-        setTitle("Graphics App");
-        mathCanvas = new MathCanvas(ml);
+        setTitle("Neural Network Parser");
+        mathCanvas = new MathCanvas(kernelLink);
         add(mathCanvas);
-        mathCanvas.setMathCommand("RegionPlot[x^2 + y^3 < 2, {x, -2, 2}, {y, -2, 2}]");
         mathCanvas.setBackground(Color.white);
-        inputTextArea = new TextArea("", 2, 40, TextArea.SCROLLBARS_VERTICAL_ONLY);
-        add(inputTextArea);
-        evalButton = new Button("Evaluate");
-        add(evalButton);
-        evalButton.addActionListener(new BnAdptr());
-        useFEButton = new Checkbox("Use front end", false);
-        CheckboxGroup cg = new CheckboxGroup();
-        graphicsButton = new Checkbox("Show graphics output", true, cg);
-        typesetButton = new Checkbox("Show typeset result", false, cg);
-        add(useFEButton);
-        add(graphicsButton);
-        add(typesetButton);
 
-        setSize(300, 400);
-        setLocation(100,100);
-        mathCanvas.setBounds(10, 25, 280, 240);
-        inputTextArea.setBounds(10, 270, 210, 60);
-        evalButton.setBounds(230, 290, 60, 30);
-        graphicsButton.setBounds(20, 340, 160, 20);
-        typesetButton.setBounds(20, 365, 160, 20);
-        useFEButton.setBounds(180, 340, 100, 20);
+        setSize(WIDTH, HEIGHT);
+        setLocation(X, Y);
+        mathCanvas.setBounds(10, 10, WIDTH - 20, HEIGHT - 20);
 
         addWindowListener(new WnAdptr());
-        setBackground(Color.lightGray);
+        setBackground(Color.white);
         setResizable(false);
 
         // Although this code would automatically be called in
@@ -78,26 +38,20 @@ public class GraphicsApp extends Frame {
         // KernelLink.PACKAGE_CONTEXT is just "JLink`", but it is
         // preferable to use this symbolic constant instead of
         // hard-coding the package context.
-        ml.evaluateToInputForm("Needs[\"" + KernelLink.PACKAGE_CONTEXT + "\"]", 0);
-        ml.evaluateToInputForm("ConnectToFrontEnd[]", 0);
+        kernelLink.evaluateToInputForm("Needs[\"" + KernelLink.PACKAGE_CONTEXT + "\"]", 0);
+        kernelLink.evaluateToInputForm("ConnectToFrontEnd[]", 0);
 
         setVisible(true);
         toFront();
     }
 
-
-    class BnAdptr implements ActionListener {
-        public void actionPerformed(ActionEvent e) {
-            mathCanvas.setImageType(
-                    graphicsButton.getState() ? MathCanvas.GRAPHICS : MathCanvas.TYPESET);
-            mathCanvas.setUsesFE(useFEButton.getState());
-            mathCanvas.setMathCommand(inputTextArea.getText());
-        }
+    public void setMathCommand(String command){
+        mathCanvas.setMathCommand(command);
     }
 
     class WnAdptr extends WindowAdapter {
         public void windowClosing(WindowEvent event) {
-            if (ml != null) {
+            if (kernelLink != null) {
                 // Because we used the front end, it is important
                 // to call CloseFrontEnd[] before closing the link.
                 // Counterintuitively, this is not because we want
@@ -108,21 +62,11 @@ public class GraphicsApp extends Frame {
                 // from the front end if necessary. The need for
                 // this will go away in future releases of
                 // Mathematica.
-                ml.evaluateToInputForm("CloseFrontEnd[]", 0);
-                ml.close();
+                kernelLink.evaluateToInputForm("CloseFrontEnd[]", 0);
+                kernelLink.close();
             }
             dispose();
             System.exit(0);
         }
-    }
-
-    private static KernelLink connect() {
-        KernelLink ml = null;
-        try {
-            ml = MathLinkFactory.createKernelLink("-linkmode launch -linkname '" + path + "'");
-        } catch (MathLinkException e) {
-            System.out.println("Link could not be created: " + e.getMessage());
-        }
-        return ml;
     }
 }
