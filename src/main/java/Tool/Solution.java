@@ -41,6 +41,14 @@ public class Solution {
         return constraint;
     }
 
+    public String getSolutionSet(){
+        return solutionSet;
+    }
+
+    public String[] getConstraints(){
+        return constraints;
+    }
+
     public String toString(){
         StringBuilder sb = new StringBuilder("Objective:\n");
         sb.append(objective);
@@ -50,7 +58,7 @@ public class Solution {
             sb.append(c);
         }
         if(solutionSet != null){
-            sb.append("\nTool.Solution Set:\n");
+            sb.append("\nSolution Set:\n");
             sb.append(solutionSet);
         }
         return sb.toString();

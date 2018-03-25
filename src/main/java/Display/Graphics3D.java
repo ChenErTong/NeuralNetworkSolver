@@ -7,7 +7,13 @@ import java.util.Map;
 
 public class Graphics3D extends Graphics {
     public Graphics3D(Map<String, String> solutions, KernelLink kl, int[][] range){
-        super(solutions, kl, range);
+        super(kl, range);
+        WINDOW_WIDTH = 1200;
+        init(solutions);
+    }
+
+    protected String constructPrefix() {
+        return "RegionPlot3D[";
     }
 
     protected String constructPostfix(int[][] range){

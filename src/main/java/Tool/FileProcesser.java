@@ -11,6 +11,28 @@ import java.util.Random;
 public class FileProcesser {
     private static FileWriter FILE_RECORDER;
 
+    public static List<double[]> readInput(String path){
+        File file = new File(path);
+        List<double[]> inputs = new ArrayList<>();
+
+        String line;
+        try {
+            BufferedReader br = new BufferedReader(new InputStreamReader(new FileInputStream(file)));
+            while((line = br.readLine()) != null) {
+                String[] numbers = line.split(" ");
+                double[] input = new double[numbers.length];
+                for (int i = 0; i < input.length; ++i){
+                    input[i] = Double.parseDouble(numbers[i]);
+                }
+                inputs.add(input);
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        return inputs;
+    }
+
     public static List<double[][]> readParameter(String path){
         File file = new File(path);
 
@@ -44,8 +66,8 @@ public class FileProcesser {
     }
 
     public static void recordSolution(List<Solution> solutions){
-        for (Solution solution: solutions) {
-            writeToFile(solution.toString() + "\n\n");
+        for (int i = 0; i < solutions.size(); ++i){
+            writeToFile("Solution " + (i + 1) + ": \n" + solutions.get(i).toString() + "\n\n");
         }
     }
 
@@ -92,7 +114,7 @@ public class FileProcesser {
     }
 
     private static String getRandomFileName() {
-        DateFormat simpleDateFormat = new SimpleDateFormat("yyyyMMddhhmmss");;
+        DateFormat simpleDateFormat = new SimpleDateFormat("yyyyMMddhhmmss_");;
         String date = simpleDateFormat.format(new Date());
         Random random = new Random();
         int num = (int) (random.nextDouble() * (9999 - 1000 + 1)) + 1000;

@@ -1,13 +1,18 @@
 package Display;
 
-import Display.Graphics;
 import com.wolfram.jlink.KernelLink;
 
 import java.util.Map;
 
 public class Graphics2D extends Graphics {
     public Graphics2D(Map<String, String> solutions, KernelLink kl, int[][] range){
-        super(solutions, kl, range);
+        super(kl, range);
+        WINDOW_WIDTH = 1000;
+        init(solutions);
+    }
+
+    protected String constructPrefix() {
+        return "RegionPlot[";
     }
 
     protected String constructPostfix(int[][] range){

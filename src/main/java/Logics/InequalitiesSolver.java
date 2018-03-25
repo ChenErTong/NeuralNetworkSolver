@@ -25,7 +25,7 @@ public class InequalitiesSolver {
         }
     }
 
-    public List<Solution> solveInequalities(List<Solution> solutions){
+    public List<Solution> solveInequalities(List<Solution> solutions, boolean showGraph){
         List<Solution> listWithSolution = new ArrayList<Solution>();
         Map<String, String> mapWithSolution = new HashMap<String, String>();
         String formula;
@@ -38,7 +38,7 @@ public class InequalitiesSolver {
             }
         }
 
-        if(listWithSolution.size() > 0){
+        if(showGraph && listWithSolution.size() > 0){
             showGraphics(listWithSolution.get(0).getInput_number(), mapWithSolution);
         }
 
@@ -93,7 +93,6 @@ public class InequalitiesSolver {
     }
 
     private String processFunction(MLFunction function){
-//        System.out.println("Function: " + function.name + ", " + function.argCount);
         MLTK mltk = new MLTK(function.name, function.argCount);
         boolean higherPriority = higherPriority(mltk);
         stack.push(mltk);
