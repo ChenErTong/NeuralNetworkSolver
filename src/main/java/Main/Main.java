@@ -59,6 +59,6 @@ public class Main {
         FileProcesser.writeToFile("Succeed in calculating new inputs in " + (endTime - startTime) / 1000.0 + "sec.\n");
 
         FileProcesser.closeFile();
-        System.out.print("\nFinish processing the program. Total Duratoin: " + (closeTime - openTime) / 1000.0 + "sec.");
+        FileProcesser.writeToFile("\nFinish processing the program. Total Duratoin: " + (closeTime - openTime) / 1000.0 + "sec.");
     }
 }
