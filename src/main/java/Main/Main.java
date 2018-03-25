@@ -58,7 +58,7 @@ public class Main {
         closeTime = endTime = System.currentTimeMillis();
         FileProcesser.writeToFile("Succeed in calculating new inputs in " + (endTime - startTime) / 1000.0 + "sec.\n");
 
-        FileProcesser.closeFile();
         FileProcesser.writeToFile("\nFinish processing the program. Total Duratoin: " + (closeTime - openTime) / 1000.0 + "sec.");
+        FileProcesser.closeFile();
     }
 }
