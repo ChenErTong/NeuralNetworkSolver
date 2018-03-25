@@ -1,4 +1,11 @@
+package Logics;
+
+import Display.Graphics2D;
+import Display.Graphics3D;
+import Tool.Solution;
+import Tool.Utility;
 import com.wolfram.jlink.*;
+
 
 import java.util.*;
 
@@ -19,41 +26,42 @@ public class InequalitiesSolver {
     }
 
     public List<Solution> solveInequalities(List<Solution> solutions){
-        List<Solution> result = new ArrayList<Solution>();
+        List<Solution> listWithSolution = new ArrayList<Solution>();
+        Map<String, String> mapWithSolution = new HashMap<String, String>();
         String formula;
 
         for (Solution solution: solutions){
-            if(!(formula = solveInequalities(solution.getInput_number(), solution.getConstraint())).equals("Impossible")){
-                result.add(new Solution(solution.getInput_number(), solution.getObjective(), formula));
+            if(!(formula = solveInequality(solution.getInput_number(), solution.getConstraint())).equals("Impossible")){
+                solution.setSolutionSet(formula);
+                listWithSolution.add(solution);
+                mapWithSolution.put(solution.getObjective(), formula);
             }
         }
 
-        if(result.size() > 0){
-            showResult(result);
+        if(listWithSolution.size() > 0){
+            showGraphics(listWithSolution.get(0).getInput_number(), mapWithSolution);
         }
 
-        return result;
+        return listWithSolution;
     }
 
-    public void showResult(List<Solution> solutions){
-
+    public void showGraphics(int input_number, Map<String, String> solutions){
+        if(input_number == 2){
+            System.out.println("Display 2-dimension graphics.");
+            new Graphics2D(solutions, kernelLink, Utility.RANGE2D);
+        }else if(input_number == 3){
+            System.out.println("Display 3-dimension graphics.");
+            new Graphics3D(solutions, kernelLink, Utility.RANGE3D);
+        }else{
+            System.out.println("The dimension cannot be displayed.");
+        }
     }
 
-    public void showResultIn2D(String formula){
-        GraphicsApp graphicsApp = new GraphicsApp(kernelLink);
-        graphicsApp.setMathCommand(formula);
+    public String solveInequality(int input_number, String constraint){
+        return solveInequality(convertToReduceFormula(input_number, constraint));
     }
 
-    public void showResultIn3D(String formula){
-        GraphicsApp graphicsApp = new GraphicsApp(kernelLink);
-        graphicsApp.setMathCommand(formula);
-    }
-
-    public String solveInequalities(int input_number, String constraint){
-        return solveInequalities(convertToReduceFormula(input_number, constraint));
-    }
-
-    public String solveInequalities(String formula){
+    public String solveInequality(String formula){
 //        System.out.println("Reduce Formula: " + formula);
 
         stack.clear();
@@ -82,10 +90,6 @@ public class InequalitiesSolver {
         }
 
         return sb.length() == 0 ? "Impossible" : sb.toString();
-    }
-
-    public void close(){
-        kernelLink.close();
     }
 
     private String processFunction(MLFunction function){
@@ -143,46 +147,6 @@ public class InequalitiesSolver {
         for (int i = 1; i <= input_number; ++i)
             sb.append("X" + i + ",");
         sb.append("}, Reals]");
-        return sb.toString();
-    }
-
-    private String convertToRegionPlotFormulaIn2D(String formula, int[][] range){
-        if(range.length != 2 || range[0].length != 2)
-            return null;
-
-        StringBuilder sb = new StringBuilder("RegionPlot[");
-        sb.append(formula);
-        sb.append(", {X1, ");
-        sb.append(range[0][0]);
-        sb.append(", ");
-        sb.append(range[0][1]);
-        sb.append("}, {X2, ");
-        sb.append(range[1][0]);
-        sb.append(", ");
-        sb.append(range[1][1]);
-        sb.append("}]");
-        return sb.toString();
-    }
-
-    private String convertToRegionPlotFormulaIn3D(String formula, int[][] range){
-        if(range.length != 3 || range[0].length != 2)
-            return null;
-
-        StringBuilder sb = new StringBuilder("RegionPlot3D[");
-        sb.append(formula);
-        sb.append(", {X1, ");
-        sb.append(range[0][0]);
-        sb.append(", ");
-        sb.append(range[0][1]);
-        sb.append("}, {X2, ");
-        sb.append(range[1][0]);
-        sb.append(", ");
-        sb.append(range[1][1]);
-        sb.append("}, {X3, ");
-        sb.append(range[2][0]);
-        sb.append(", ");
-        sb.append(range[2][1]);
-        sb.append("}]");
         return sb.toString();
     }
 

@@ -1,26 +1,23 @@
+package Display;
+
 import com.wolfram.jlink.KernelLink;
-import com.wolfram.jlink.MathCanvas;
 import com.wolfram.jlink.MathLinkException;
 import com.wolfram.jlink.MathLinkFactory;
 
+import javax.swing.*;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 
-public class GraphicsAppBackup extends Frame {
+public class GraphicsAppBackup extends JFrame {
     private static String path = "E:\\Wolfram Research\\Mathematica\\11.2\\mathkernel.exe";
 
     static GraphicsAppBackup app;
     static KernelLink ml;
 
-    MathCanvas mathCanvas;
-    TextArea inputTextArea;
-    Button evalButton;
-    Checkbox useFEButton;
-    Checkbox graphicsButton;
-    Checkbox typesetButton;
+//    MathCanvas mathCanvas;
+    JMenuBar jMenuBar;
+    JMenu jMenu;
 
     public static void main(String[] argv) {
         try {
@@ -46,32 +43,29 @@ public class GraphicsAppBackup extends Frame {
 
     public GraphicsAppBackup() {
         setLayout(null);
-        setTitle("Graphics App");
-        mathCanvas = new MathCanvas(ml);
-        add(mathCanvas);
-        mathCanvas.setMathCommand("RegionPlot[x^2 + y^3 < 2, {x, -2, 2}, {y, -2, 2}]");
-        mathCanvas.setBackground(Color.white);
-        inputTextArea = new TextArea("", 2, 40, TextArea.SCROLLBARS_VERTICAL_ONLY);
-        add(inputTextArea);
-        evalButton = new Button("Evaluate");
-        add(evalButton);
-        evalButton.addActionListener(new BnAdptr());
-        useFEButton = new Checkbox("Use front end", false);
-        CheckboxGroup cg = new CheckboxGroup();
-        graphicsButton = new Checkbox("Show graphics output", true, cg);
-        typesetButton = new Checkbox("Show typeset result", false, cg);
-        add(useFEButton);
-        add(graphicsButton);
-        add(typesetButton);
+        setTitle("Display.Graphics App");
+//        mathCanvas = new MathCanvas(ml);
+//        add(mathCanvas);
+//        mathCanvas.setMathCommand("RegionPlot[x^2 + y^3 < 2, {x, -2, 2}, {y, -2, 2}]");
+//        mathCanvas.setBackground(Color.white);
+
 
         setSize(300, 400);
         setLocation(100,100);
-        mathCanvas.setBounds(10, 25, 280, 240);
-        inputTextArea.setBounds(10, 270, 210, 60);
-        evalButton.setBounds(230, 290, 60, 30);
-        graphicsButton.setBounds(20, 340, 160, 20);
-        typesetButton.setBounds(20, 365, 160, 20);
-        useFEButton.setBounds(180, 340, 100, 20);
+//        mathCanvas.setBounds(10, 25, 280, 240);
+
+        jMenuBar = new JMenuBar();
+        jMenu = new JMenu("颜色");
+        JMenuItem jmt1=new JMenuItem("红色"),
+                jmt2=new JMenuItem("黄色"),
+                jmt3=new JMenuItem("蓝色");
+        jMenuBar.setBounds(0, 0, 100, 100);
+
+        setJMenuBar(jMenuBar);
+        jMenuBar.add(jMenu);
+        jMenu.add(jmt1);
+        jMenu.add(jmt2);
+        jMenu.add(jmt3);
 
         addWindowListener(new WnAdptr());
         setBackground(Color.lightGray);
@@ -90,16 +84,6 @@ public class GraphicsAppBackup extends Frame {
 
         setVisible(true);
         toFront();
-    }
-
-
-    class BnAdptr implements ActionListener {
-        public void actionPerformed(ActionEvent e) {
-            mathCanvas.setImageType(
-                    graphicsButton.getState() ? MathCanvas.GRAPHICS : MathCanvas.TYPESET);
-            mathCanvas.setUsesFE(useFEButton.getState());
-            mathCanvas.setMathCommand(inputTextArea.getText());
-        }
     }
 
     class WnAdptr extends WindowAdapter {

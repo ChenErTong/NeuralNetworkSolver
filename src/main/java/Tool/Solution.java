@@ -1,3 +1,5 @@
+package Tool;
+
 import java.util.List;
 
 public class Solution {
@@ -5,12 +7,7 @@ public class Solution {
     private String objective;
     private String[] constraints;
     private String constraint;
-
-    public Solution(int in, String o, String c){
-        input_number = in;
-        objective = o;
-        constraint = c;
-    }
+    private String solutionSet;
 
     public Solution(double[] ob, List<double[]> cons){
         input_number = ob.length - 1;
@@ -20,10 +17,16 @@ public class Solution {
             constraints[i] = convertConstraints(cons.get(i));
 
         StringBuilder sb = new StringBuilder();
-        for (String constraint: constraints)
-            sb.append(constraint + " && ");
+        for (String constraint: constraints){
+            sb.append(constraint);
+            sb.append(" && ");
+        }
 
         constraint = sb.length() > 0 ? sb.substring(0, sb.length() - 4) : "";
+    }
+
+    public void setSolutionSet(String ss){
+        solutionSet = ss;
     }
 
     public int getInput_number(){
@@ -34,19 +37,34 @@ public class Solution {
         return objective;
     }
 
-    public String[] getConstraints(){
-        return constraints;
-    }
-
     public String getConstraint(){
         return constraint;
+    }
+
+    public String toString(){
+        StringBuilder sb = new StringBuilder("Objective:\n");
+        sb.append(objective);
+        sb.append("\nConstraints:");
+        for (String c: constraints) {
+            sb.append("\n");
+            sb.append(c);
+        }
+        if(solutionSet != null){
+            sb.append("\nTool.Solution Set:\n");
+            sb.append(solutionSet);
+        }
+        return sb.toString();
     }
 
     private String convertObjective(double[] ob){
         StringBuilder sb = new StringBuilder();
         int i = 0;
-        for (; i < ob.length - 1; ++i)
-            sb.append(String.format("%.2f", ob[i]) + " * X" + (i + 1) + " + ");
+        for (; i < ob.length - 1; ++i){
+            sb.append(String.format("%.2f", ob[i]));
+            sb.append(" * X");
+            sb.append(i + 1);
+            sb.append(" + ");
+        }
         sb.append(String.format("%.2f", ob[i]));
         return sb.toString();
     }

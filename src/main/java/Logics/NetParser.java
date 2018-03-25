@@ -1,6 +1,7 @@
-import sun.nio.ch.Net;
+package Logics;
 
-import java.io.*;
+import Tool.Solution;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -9,63 +10,32 @@ public class NetParser {
     /**
      * 范围集
      */
-    private List<Solution> solutions = new ArrayList<Solution>();
+    private List<Solution> solutions = new ArrayList<>();
 
     /**
      * 解析神经网络参数，获得各种情况的对应范围集
-     * @param path_weight 权重文件参数
-     * @param path_bias 偏差文件参数
+     * @param weights 神经网络权重参数
+     * @param biases 神经网络偏差参数
      * @return 范围集
      */
-    public List<Solution> parse(String path_weight, String path_bias){
+    public List<Solution> parse(List<double[][]> weights, List<double[][]> biases){
         solutions.clear();
 
-        List<double[][]> weights = readParameter(path_weight);
-        List<double[][]> biases = readParameter(path_bias);
-
-        for (double[][] weight: weights) outputLayer(weight, "weight");
-        for (double[][] bias: biases) outputLayer(bias, "bias");
-
+        System.out.println("Start parsing the parameters.");
         long startTime = System.currentTimeMillis();
-        calculateNet(2, weights, biases);
+        calculateNet(calculateInputNumber(weights), weights, biases);
         long endTime = System.currentTimeMillis();
-        System.out.println("Total Duration: " + (endTime - startTime) / 1000.0 + " sec");
+        System.out.println("Finish parsing the parameters, total duration: " + (endTime - startTime) / 1000.0 + " sec");
 
         return solutions;
     }
 
-    private List<double[][]> readParameter(String path){
-        File file = new File(path);
-
-        String line;
-        double[] cache;
-        List<double[]> weight = null;
-        List<double[][]> weights = new ArrayList<double[][]>();
-        try {
-            BufferedReader br = new BufferedReader(new InputStreamReader(new FileInputStream(file)));
-            while((line = br.readLine()) != null){
-                if(line.length() > 0){
-                    String[] numbers = line.split(" ");
-                    if(weight == null)  weight = new ArrayList<double[]>();
-
-                    cache = new double[numbers.length];
-                    for (int i = 0; i < numbers.length; ++i)
-                        cache[i] = Double.parseDouble(numbers[i]);
-
-                    weight.add(cache);
-                }else{
-                    weights.add(weight.toArray(new double[weight.size()][]));
-                    weight = null;
-                }
-            }
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
-            e.printStackTrace();
+    private int calculateInputNumber(List<double[][]> weights){
+        int input_number = 0;
+        if(weights != null && weights.size() > 0){
+            input_number = weights.get(0)[0].length - 1;
         }
-
-        weights.add(weight.toArray(new double[weight.size()][]));
-        return weights;
+        return input_number;
     }
 
     private void calculateNet(int input_number, List<double[][]> weights, List<double[][]> biases){
@@ -85,13 +55,14 @@ public class NetParser {
         for (int i = 1; i <= input_number; ++i)
             input_layer[i][i - 1] = 1;
 
-        calculateNet(input_layer, weights, biases, 0, weights.size(), new ArrayList<double[]>());
+        calculateNet(input_layer, weights, biases, 0, weights.size(), new ArrayList<>());
     }
 
     private void calculateNet(double[][] input_layer, List<double[][]> weights, List<double[][]> biases, int layer_index, int layer_nubmer, List<double[]> condition){
         //如果已经计算到最后一层，则将结果记录后返回
         if(layer_index == layer_nubmer) {
-            outputPredictionLayer(input_layer, condition);
+            Solution solution = new Solution(input_layer[1], condition);
+            solutions.add(solution);
             return;
         }
 
@@ -106,7 +77,7 @@ public class NetParser {
             int relu_tag = (int) Math.pow(2, input_layer.length - 1) - 1;
             //获得当前层所有节点大于零小于零的排列组合，递归调用计算下一层
             for (int i = relu_tag; i >= 0; --i){
-                List<double[]> tmp_condition = new ArrayList<double[]>(condition);
+                List<double[]> tmp_condition = new ArrayList<>(condition);
                 tmp_condition.addAll(attainCondition(input_layer, i));
                 calculateNet(calculateLayer(cache, i), weights, biases, layer_index, layer_nubmer, tmp_condition);
             }
@@ -143,17 +114,24 @@ public class NetParser {
     }
 
     private boolean checkValidity(int input_number, List<double[][]> parameters){
-        if(parameters.size() == 0) return false;
-        if((input_number + 1) != parameters.get(0)[0].length) return false;
+        if(parameters.size() == 0){
+            return false;
+        }
+        if((input_number + 1) != parameters.get(0)[0].length){
+            return false;
+        }
 
-        for (int i = 0; i < parameters.size() - 1; ++i)
-            if ((parameters.get(i).length + 1) != parameters.get(i + 1)[0].length) return false;
+        for (int i = 0; i < parameters.size() - 1; ++i){
+            if ((parameters.get(i).length + 1) != parameters.get(i + 1)[0].length) {
+                return false;
+            }
+        }
 
         return true;
     }
 
     private List<double[]> attainCondition(double[][] input_layer, int relu_tag){
-        List<double[]> result = new ArrayList<double[]>();
+        List<double[]> result = new ArrayList<>();
         for (int i = input_layer.length - 1; i > 0; --i){
             boolean isZero = (relu_tag % 2 == 1);
             relu_tag /= 2;
@@ -190,24 +168,5 @@ public class NetParser {
         for (int i = 0; i < a.length; ++i)
             result[i] = a[i] + b[i];
         return result;
-    }
-
-    private void outputPredictionLayer(double[][] prediction_layer, List<double[]> cache){
-        Solution solution = new Solution(prediction_layer[1], cache);
-        System.out.print("Prediction: " + solution.getObjective());
-        System.out.print("\nConstraints: " + solution.getConstraint());
-        System.out.println("\n");
-        solutions.add(solution);
-    }
-
-    private void outputLayer(double[][] layer, String comment){
-        System.out.print(comment + ": ");
-        for (double[] node: layer) {
-            for (double parameter: node) {
-                System.out.print(String.format("%.2f", parameter) + " ");
-            }
-            System.out.print("; ");
-        }
-        System.out.print("\n");
     }
 }
