@@ -16,6 +16,9 @@ public class Utility {
     public static final Map<String, String> SYMBOLS;
     public static final Map<String, Integer> Priority;
 
+    public static boolean RECORD_TO_FILE = false;
+    public static boolean SHOW_GRAPH = false;
+
     static {
         SYMBOLS = new HashMap<>();
         SYMBOLS.put("And", "&&");

@@ -83,21 +83,24 @@ public class FileProcesser {
     }
 
     public static void writeToFile(String content){
-        if(FILE_RECORDER == null){
-            File file = new File(Utility.RECORD_PATH + getRandomFileName() + ".txt");
+        if(Utility.RECORD_TO_FILE){
+            if(FILE_RECORDER == null){
+                File file = new File(Utility.RECORD_PATH + getRandomFileName() + ".txt");
+                try {
+                    file.createNewFile();
+                    FILE_RECORDER = new FileWriter(file, true);
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+
             try {
-                file.createNewFile();
-                FILE_RECORDER = new FileWriter(file, true);
+                FILE_RECORDER.append(content);
             } catch (IOException e) {
                 e.printStackTrace();
             }
         }
 
-        try {
-            FILE_RECORDER.append(content);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
         System.out.print(content);
     }
 

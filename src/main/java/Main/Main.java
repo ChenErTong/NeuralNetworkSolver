@@ -36,12 +36,11 @@ public class Main {
 
         InequalitiesSolver solver = InequalitiesSolver.instance;
         startTime = System.currentTimeMillis();
-        solutions = solver.solveInequalities(solutions, false);
+        solutions = solver.solveInequalities(solutions, Utility.SHOW_GRAPH);
         endTime = System.currentTimeMillis();
         FileProcesser.writeToFile("===========================================\n" +
                 "Succeed in solving the inequalities in " + (endTime - startTime) / 1000.0 + "sec.\n");
         FileProcesser.recordSolution(solutions);
-
 
         Calculator calculator = new Calculator();
         FileProcesser.writeToFile("Begin calculating new inputs:\n");
