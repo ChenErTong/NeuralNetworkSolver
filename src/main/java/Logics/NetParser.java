@@ -20,12 +20,7 @@ public class NetParser {
      */
     public List<Solution> parse(List<double[][]> weights, List<double[][]> biases){
         solutions.clear();
-
-        System.out.println("Start parsing the parameters.");
-        long startTime = System.currentTimeMillis();
         calculateNet(calculateInputNumber(weights), weights, biases);
-        long endTime = System.currentTimeMillis();
-        System.out.println("Finish parsing the parameters, total duration: " + (endTime - startTime) / 1000.0 + " sec");
 
         return solutions;
     }
@@ -39,16 +34,9 @@ public class NetParser {
     }
 
     private void calculateNet(int input_number, List<double[][]> weights, List<double[][]> biases){
-        if (!checkValidity(input_number, weights)){
-            System.out.println("weights参数不符合");
+        if (!checkValidity(input_number, weights) || !checkValidity(input_number, biases)){
             return;
         }
-
-        if (!checkValidity(input_number, biases)){
-            System.out.println("biases参数不符合");
-            return;
-        }
-        System.out.println("成功检验所有参数");
 
         double[][] input_layer = new double[input_number + 1][input_number + 1];
         input_layer[0][input_number] = 1;
