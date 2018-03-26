@@ -15,18 +15,16 @@ public class Main {
         long openTime, closeTime, startTime, endTime;
         openTime = startTime = System.currentTimeMillis();
         List<double[][]> weights = FileProcesser.readParameter(Utility.WEIGHT_PATH);
-        List<double[][]> biases = FileProcesser.readParameter(Utility.BIAS_PATH);
         List<double[]> inputs = FileProcesser.readInput(Utility.INPUT_PATH);
         endTime = System.currentTimeMillis();
         FileProcesser.writeToFile("Succeed in reading the parameters in " + (endTime - startTime) / 1000.0 + "sec.\n");
 
         for (double[][] weight: weights) FileProcesser.recordLayer(weight, "weight");
-        for (double[][] bias: biases) FileProcesser.recordLayer(bias, "bias");
         FileProcesser.writeToFile("\n");
 
         NetParser parser = new NetParser();
         startTime = System.currentTimeMillis();
-        List<Solution> solutions = parser.parse(weights, biases);
+        List<Solution> solutions = parser.parse(weights);
         endTime = System.currentTimeMillis();
         FileProcesser.writeToFile("Succeed in parsing the network in " + (endTime - startTime) / 1000.0 + "sec.\n");
         FileProcesser.recordSolution(solutions);
@@ -49,7 +47,7 @@ public class Main {
             if(solution == null){
                 FileProcesser.writeToFile("No Solution Set Satisfied.\n");
             }else{
-                FileProcesser.writeToFile(solution.getSolutionSet() + ": " + Arrays.toString(calculator.calculateOutout(solution.getObjectives(), input)) + "\n");
+                FileProcesser.writeToFile(solution.getConstraint() + ": " + Arrays.toString(calculator.calculateOutout(solution.getObjectives(), input)) + "\n");
             }
         }
         closeTime = endTime = System.currentTimeMillis();

@@ -11,6 +11,23 @@ import java.util.Random;
 public class FileProcesser {
     private static FileWriter FILE_RECORDER;
 
+    public static void recordParameter(List<String> parameters, String path){
+        File file = new File(path);
+
+        try {
+            if(!file.exists()){
+                file.createNewFile();
+            }
+            FileWriter writer = new FileWriter(file, false);
+            for (String parameter : parameters) {
+                writer.append(parameter);
+            }
+            writer.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
     public static List<double[]> readInput(String path){
         File file = new File(path);
         List<double[]> inputs = new ArrayList<>();
@@ -44,7 +61,7 @@ public class FileProcesser {
             BufferedReader br = new BufferedReader(new InputStreamReader(new FileInputStream(file)));
             while((line = br.readLine()) != null){
                 if(line.length() > 0){
-                    String[] numbers = line.split(" ");
+                    String[] numbers = line.split(", ");
                     if(weight == null)  weight = new ArrayList<double[]>();
 
                     cache = new double[numbers.length];

@@ -15,38 +15,23 @@ public class NetParser {
     /**
      * 解析神经网络参数，获得各种情况的对应范围集
      * @param weights 神经网络权重参数
-     * @param biases 神经网络偏差参数
      * @return 范围集
      */
-    public List<Solution> parse(List<double[][]> weights, List<double[][]> biases){
+    public List<Solution> parse(List<double[][]> weights){
         solutions.clear();
-        calculateNet(calculateInputNumber(weights), weights, biases);
-
-        return solutions;
-    }
-
-    private int calculateInputNumber(List<double[][]> weights){
-        int input_number = 0;
-        if(weights != null && weights.size() > 0){
-            input_number = weights.get(0)[0].length - 1;
-        }
-        return input_number;
-    }
-
-    private void calculateNet(int input_number, List<double[][]> weights, List<double[][]> biases){
-        if (!checkValidity(input_number, weights) || !checkValidity(input_number, biases)){
-            return;
-        }
+        int input_number = calculateInputNumber(weights);
 
         double[][] input_layer = new double[input_number + 1][input_number + 1];
         input_layer[0][input_number] = 1;
         for (int i = 1; i <= input_number; ++i)
             input_layer[i][i - 1] = 1;
 
-        calculateNet(input_layer, weights, biases, 0, weights.size(), new ArrayList<>());
+        calculateNet(input_layer, weights, 0, weights.size(), new ArrayList<>());
+
+        return solutions;
     }
 
-    private void calculateNet(double[][] input_layer, List<double[][]> weights, List<double[][]> biases, int layer_index, int layer_nubmer, List<double[]> condition){
+    private void calculateNet(double[][] input_layer, List<double[][]> weights, int layer_index, int layer_nubmer, List<double[]> condition){
         //如果已经计算到最后一层，则将结果记录后返回
         if(layer_index == layer_nubmer) {
             Solution solution = new Solution(input_layer, condition);
@@ -56,27 +41,28 @@ public class NetParser {
 
         //获取当前层的所有权重
         double[][] weight = weights.get(layer_index);
-        double[][] bias = biases.get(layer_index);
-        double[][][][] cache = attainNodeCache(input_layer, weight, bias);
+        double[][][][] cache = attainNodeCache(input_layer, weight);
 
         if(layer_index++ == 0){
-            calculateNet(calculateLayer(cache,0), weights, biases, layer_index, layer_nubmer, condition);
+            calculateNet(calculateLayer(cache,0), weights, layer_index, layer_nubmer, condition);
         }else {
             int relu_tag = (int) Math.pow(2, input_layer.length - 1) - 1;
             //获得当前层所有节点大于零小于零的排列组合，递归调用计算下一层
             for (int i = relu_tag; i >= 0; --i){
                 List<double[]> tmp_condition = new ArrayList<>(condition);
                 tmp_condition.addAll(attainCondition(input_layer, i));
-                calculateNet(calculateLayer(cache, i), weights, biases, layer_index, layer_nubmer, tmp_condition);
+                calculateNet(calculateLayer(cache, i), weights, layer_index, layer_nubmer, tmp_condition);
             }
         }
     }
 
     private double[][] calculateLayer(double[][][][] cache, int relu_tag){
         double[][] output_layer = new double[cache.length + 1][cache[0][0][0].length];
-        output_layer[0][output_layer[0].length - 1] = 1;
-        for (int i = 1;i < output_layer.length; i++)
-            output_layer[i] = calculateNode(cache, i - 1, relu_tag);
+
+        for (int i = 0;i < output_layer.length - 1; i++){
+            output_layer[i] = calculateNode(cache, i, relu_tag);
+        }
+        output_layer[output_layer.length - 1][output_layer[0].length - 1] = 1;
 
         return output_layer;
     }
@@ -101,21 +87,12 @@ public class NetParser {
         return node;
     }
 
-    private boolean checkValidity(int input_number, List<double[][]> parameters){
-        if(parameters.size() == 0){
-            return false;
+    private int calculateInputNumber(List<double[][]> weights){
+        int input_number = 0;
+        if(weights != null && weights.size() > 0){
+            input_number = weights.get(0)[0].length - 1;
         }
-        if((input_number + 1) != parameters.get(0)[0].length){
-            return false;
-        }
-
-        for (int i = 0; i < parameters.size() - 1; ++i){
-            if ((parameters.get(i).length + 1) != parameters.get(i + 1)[0].length) {
-                return false;
-            }
-        }
-
-        return true;
+        return input_number;
     }
 
     private List<double[]> attainCondition(double[][] input_layer, int relu_tag){
@@ -137,12 +114,11 @@ public class NetParser {
         return result;
     }
 
-    private double[][][][] attainNodeCache(double[][] input_layer, double[][] weight, double[][] bias){
+    private double[][][][] attainNodeCache(double[][] input_layer, double[][] weight){
         double[][][][] cache = new double[weight.length][input_layer.length][2][input_layer[0].length];
         int node_last_index = input_layer[0].length - 1;
         for (int i = 0; i < weight.length; ++i){
             for (int j = 0; j < input_layer.length; ++j){
-                cache[i][j][0][node_last_index] = cache[i][j][1][node_last_index] = bias[i][j];
                 for (int k = 0; k <= node_last_index; ++k){
                     cache[i][j][1][k] += input_layer[j][k] * weight[i][j];
                 }

@@ -10,10 +10,10 @@ public class Solution {
     private String solutionSet;
 
     public Solution(double[][] ob, List<double[]> cons){
-        input_number = ob[1].length - 1;
+        input_number = ob[0].length - 1;
         objectives = new String[ob.length - 1];
-        for (int i = 1; i < ob.length; ++i){
-            objectives[i - 1] = convertObjective(ob[i]);
+        for (int i = 0; i < ob.length - 1; ++i){
+            objectives[i] = convertObjective(ob[i]);
         }
         constraints = new String[cons.size()];
         for (int i = 0; i < constraints.length; ++i)

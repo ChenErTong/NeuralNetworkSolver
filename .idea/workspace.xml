@@ -2,26 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f9c9a5e8-6abf-4a30-8fef-3c4c1355ccd1" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/Logics/NeuralNet.java" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/NeuralNetworkSolver.iml" afterPath="$PROJECT_DIR$/NeuralNetworkSolver.iml" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Logics/Calculator.java" afterPath="$PROJECT_DIR$/src/main/java/Logics/Calculator.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Logics/InequalitiesSolver.java" afterPath="$PROJECT_DIR$/src/main/java/Logics/InequalitiesSolver.java" />
+      <change beforePath="$PROJECT_DIR$/biases.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/input.txt" afterPath="$PROJECT_DIR$/input.txt" />
+      <change beforePath="$PROJECT_DIR$/myMlPerceptron.nnet" afterPath="" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Logics/NetParser.java" afterPath="$PROJECT_DIR$/src/main/java/Logics/NetParser.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Logics/NeuralNet.java" afterPath="$PROJECT_DIR$/src/main/java/Logics/NeuralNet.java" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Main/Main.java" afterPath="$PROJECT_DIR$/src/main/java/Main/Main.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Tool/FileProcesser.java" afterPath="$PROJECT_DIR$/src/main/java/Tool/FileProcesser.java" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Tool/Solution.java" afterPath="$PROJECT_DIR$/src/main/java/Tool/Solution.java" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Display/GraphicsAppBackup$WnAdptr.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Display/GraphicsAppBackup.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Display/JListTest$1.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Display/JListTest.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Logics/Calculator.class" afterPath="$PROJECT_DIR$/target/classes/Logics/Calculator.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Logics/InequalitiesSolver.class" afterPath="$PROJECT_DIR$/target/classes/Logics/InequalitiesSolver.class" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Tool/Utility.java" afterPath="$PROJECT_DIR$/src/main/java/Tool/Utility.java" />
       <change beforePath="$PROJECT_DIR$/target/classes/Logics/NetParser.class" afterPath="$PROJECT_DIR$/target/classes/Logics/NetParser.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Logics/NeuralNetwork2.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Logics/NeuralNetwork3.class" afterPath="" />
       <change beforePath="$PROJECT_DIR$/target/classes/Main/Main.class" afterPath="$PROJECT_DIR$/target/classes/Main/Main.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Tool/FileProcesser.class" afterPath="$PROJECT_DIR$/target/classes/Tool/FileProcesser.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Tool/Solution.class" afterPath="$PROJECT_DIR$/target/classes/Tool/Solution.class" />
       <change beforePath="$PROJECT_DIR$/target/classes/Tool/Utility.class" afterPath="$PROJECT_DIR$/target/classes/Tool/Utility.class" />
+      <change beforePath="$PROJECT_DIR$/weights.txt" afterPath="$PROJECT_DIR$/weights.txt" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -35,155 +31,85 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="Calculator.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/Logics/Calculator.java">
+      <file leaf-file-name="NetParser.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/Logics/NetParser.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="21" column="5" lean-forward="false" selection-start-line="21" selection-start-column="5" selection-end-line="21" selection-end-column="5" />
+            <state relative-caret-position="780">
+              <caret line="44" column="0" lean-forward="true" selection-start-line="44" selection-start-column="0" selection-end-line="44" selection-end-column="0" />
               <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#207#208#0" expanded="true" />
-                <element signature="e#251#252#0" expanded="true" />
-                <element signature="method#meetConstraints#0;class#Calculator#0" expanded="false" />
-                <element signature="method#meetConstraints#1;class#Calculator#0" expanded="false" />
+                <element signature="method#calculateLayer#0;class#NetParser#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="NeuralNet.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="NeuralNet.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/Logics/NeuralNet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="65" column="0" lean-forward="false" selection-start-line="65" selection-start-column="0" selection-end-line="65" selection-end-column="0" />
+            <state relative-caret-position="327">
+              <caret line="44" column="0" lean-forward="true" selection-start-line="44" selection-start-column="0" selection-end-line="44" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#615#616#0" expanded="true" />
-                <element signature="e#652#653#0" expanded="true" />
+                <element signature="method#NeuralNet#0;class#NeuralNet#0" expanded="false" />
+                <element signature="method#train#0;class#NeuralNet#0" expanded="false" />
+                <element signature="method#calculate#0;class#NeuralNet#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MultiLayerPerceptron.class" pinned="false" current-in-tab="false">
-        <entry file="jar://$PROJECT_DIR$/lib/neuroph-core-2.94.jar!/org/neuroph/nnet/MultiLayerPerceptron.class">
+      <file leaf-file-name="weights.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/weights.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="234">
-              <caret line="107" column="22" lean-forward="false" selection-start-line="107" selection-start-column="22" selection-end-line="107" selection-end-column="22" />
+            <state relative-caret-position="180">
+              <caret line="6" column="0" lean-forward="true" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Utility.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/Tool/Utility.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="217">
+              <caret line="9" column="66" lean-forward="false" selection-start-line="9" selection-start-column="66" selection-end-line="9" selection-end-column="66" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FileProcesser.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/Tool/FileProcesser.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="183">
+              <caret line="63" column="52" lean-forward="false" selection-start-line="63" selection-start-column="52" selection-end-line="63" selection-end-column="52" />
               <folding>
-                <marker date="1522061385280" expanded="false" signature="0:104" ph="/.../" />
-                <marker date="1522061385280" expanded="false" signature="140:848" ph="..." />
-                <marker date="1522061385280" expanded="true" signature="1042:1323" ph="{...}" />
-                <marker date="1522061385280" expanded="true" signature="1381:1934" ph="{...}" />
-                <marker date="1522061385280" expanded="true" signature="2035:2580" ph="{...}" />
-                <marker date="1522061385280" expanded="true" signature="2688:2961" ph="{...}" />
-                <marker date="1522061385280" expanded="true" signature="3061:3131" ph="{...}" />
-                <marker date="1522061385280" expanded="true" signature="3230:4561" ph="{...}" />
-                <marker date="1522061385280" expanded="true" signature="4604:4721" ph="{...}" />
+                <element signature="method#readInput#0;class#FileProcesser#0" expanded="false" />
+                <element signature="method#recordSolution#0;class#FileProcesser#0" expanded="false" />
+                <element signature="method#recordLayer#0;class#FileProcesser#0" expanded="false" />
+                <element signature="method#closeFile#0;class#FileProcesser#0" expanded="false" />
+                <element signature="method#getRandomFileName#0;class#FileProcesser#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Neuron.class" pinned="false" current-in-tab="false">
-        <entry file="jar://$PROJECT_DIR$/lib/neuroph-core-2.94.jar!/org/neuroph/core/Neuron.class">
+      <file leaf-file-name="input.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/input.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="161">
-              <caret line="20" column="46" lean-forward="false" selection-start-line="20" selection-start-column="46" selection-end-line="20" selection-end-column="46" />
-              <folding>
-                <marker date="1522061385280" expanded="false" signature="0:104" ph="/.../" />
-                <marker date="1522061385280" expanded="false" signature="140:417" ph="..." />
-                <marker date="1522061385280" expanded="true" signature="938:1133" ph="{...}" />
-                <marker date="1522061385280" expanded="true" signature="1217:1708" ph="{...}" />
-                <marker date="1522061385280" expanded="true" signature="1738:1896" ph="{...}" />
-                <marker date="1522061385280" expanded="true" signature="1922:1988" ph="{...}" />
-                <marker date="1522061385280" expanded="false" signature="2028:2039" ph=" { " />
-                <marker date="1522061385280" expanded="false" signature="2063:2069" ph=" }" />
-                <marker date="1522061385280" expanded="false" signature="2102:2113" ph=" { " />
-                <marker date="1522061385280" expanded="false" signature="2136:2142" ph=" }" />
-                <marker date="1522061385280" expanded="false" signature="2173:2184" ph=" { " />
-                <marker date="1522061385280" expanded="false" signature="2203:2209" ph=" }" />
-                <marker date="1522061385280" expanded="false" signature="2251:2262" ph=" { " />
-                <marker date="1522061385280" expanded="false" signature="2302:2308" ph=" }" />
-                <marker date="1522061385280" expanded="true" signature="2366:2679" ph="{...}" />
-                <marker date="1522061385280" expanded="true" signature="2738:3055" ph="{...}" />
-                <marker date="1522061385280" expanded="true" signature="3115:3665" ph="{...}" />
-                <marker date="1522061385280" expanded="true" signature="3721:3839" ph="{...}" />
-                <marker date="1522061385280" expanded="true" signature="3913:4042" ph="{...}" />
-                <marker date="1522061385280" expanded="true" signature="4106:4540" ph="{...}" />
-                <marker date="1522061385280" expanded="false" signature="4597:4608" ph=" { " />
-                <marker date="1522061385280" expanded="false" signature="4637:4643" ph=" }" />
-                <marker date="1522061385280" expanded="false" signature="4698:4709" ph=" { " />
-                <marker date="1522061385280" expanded="false" signature="4736:4742" ph=" }" />
-                <marker date="1522061385280" expanded="false" signature="4801:4812" ph=" { " />
-                <marker date="1522061385280" expanded="false" signature="4847:4853" ph=" }" />
-                <marker date="1522061385280" expanded="false" signature="4913:4924" ph=" { " />
-                <marker date="1522061385280" expanded="false" signature="4957:4963" ph=" }" />
-                <marker date="1522061385280" expanded="true" signature="5026:5376" ph="{...}" />
-                <marker date="1522061385280" expanded="true" signature="5436:5778" ph="{...}" />
-                <marker date="1522061385280" expanded="false" signature="5823:5834" ph=" { " />
-                <marker date="1522061385280" expanded="false" signature="5864:5870" ph=" }" />
-                <marker date="1522061385280" expanded="false" signature="5916:5927" ph=" { " />
-                <marker date="1522061385280" expanded="false" signature="5955:5961" ph=" }" />
-                <marker date="1522061385280" expanded="true" signature="6002:6094" ph="{...}" />
-                <marker date="1522061385280" expanded="true" signature="6155:6481" ph="{...}" />
-                <marker date="1522061385280" expanded="false" signature="6544:6555" ph=" { " />
-                <marker date="1522061385280" expanded="false" signature="6590:6596" ph=" }" />
-                <marker date="1522061385280" expanded="false" signature="6668:6679" ph=" { " />
-                <marker date="1522061385280" expanded="false" signature="6720:6726" ph=" }" />
-                <marker date="1522061385280" expanded="false" signature="6771:6782" ph=" { " />
-                <marker date="1522061385280" expanded="false" signature="6808:6814" ph=" }" />
-                <marker date="1522061385280" expanded="false" signature="6865:6876" ph=" { " />
-                <marker date="1522061385280" expanded="false" signature="6905:6911" ph=" }" />
-                <marker date="1522061385280" expanded="false" signature="6957:6968" ph=" { " />
-                <marker date="1522061385280" expanded="false" signature="6994:7000" ph=" }" />
-                <marker date="1522061385280" expanded="false" signature="7035:7046" ph=" { " />
-                <marker date="1522061385280" expanded="false" signature="7070:7076" ph=" }" />
-                <marker date="1522061385280" expanded="true" signature="7111:7368" ph="{...}" />
-                <marker date="1522061385280" expanded="false" signature="7398:7409" ph=" { " />
-                <marker date="1522061385280" expanded="false" signature="7427:7433" ph=" }" />
-                <marker date="1522061385280" expanded="false" signature="7473:7484" ph=" { " />
-                <marker date="1522061385280" expanded="false" signature="7503:7509" ph=" }" />
-                <marker date="1522061385280" expanded="false" signature="7551:7562" ph=" { " />
-                <marker date="1522061385280" expanded="false" signature="7583:7589" ph=" }" />
-                <marker date="1522061385280" expanded="true" signature="7639:7861" ph="{...}" />
-                <marker date="1522061385280" expanded="false" signature="7891:7902" ph=" { " />
-                <marker date="1522061385280" expanded="false" signature="7920:7926" ph=" }" />
-                <marker date="1522061385280" expanded="false" signature="7966:7977" ph=" { " />
-                <marker date="1522061385280" expanded="false" signature="7996:8002" ph=" }" />
-                <marker date="1522061385280" expanded="true" signature="8064:8143" ph="{...}" />
-              </folding>
+            <state relative-caret-position="90">
+              <caret line="3" column="5" lean-forward="false" selection-start-line="3" selection-start-column="5" selection-end-line="3" selection-end-column="5" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Connection.class" pinned="false" current-in-tab="false">
-        <entry file="jar://$PROJECT_DIR$/lib/neuroph-core-2.94.jar!/org/neuroph/core/Connection.class">
+      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/Main/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="810">
-              <caret line="31" column="35" lean-forward="false" selection-start-line="31" selection-start-column="35" selection-end-line="31" selection-end-column="35" />
-              <folding>
-                <marker date="1522061385280" expanded="false" signature="0:104" ph="/.../" />
-                <marker date="1522061385280" expanded="false" signature="140:187" ph="..." />
-                <marker date="1522061385280" expanded="true" signature="444:896" ph="{...}" />
-                <marker date="1522061385280" expanded="true" signature="971:1188" ph="{...}" />
-                <marker date="1522061385280" expanded="true" signature="1266:1332" ph="{...}" />
-                <marker date="1522061385280" expanded="false" signature="1363:1374" ph=" { " />
-                <marker date="1522061385280" expanded="false" signature="1393:1399" ph=" }" />
-                <marker date="1522061385280" expanded="true" signature="1442:1623" ph="{...}" />
-                <marker date="1522061385280" expanded="false" signature="1653:1664" ph=" { " />
-                <marker date="1522061385280" expanded="false" signature="1699:1705" ph=" }" />
-                <marker date="1522061385280" expanded="false" signature="1743:1754" ph=" { " />
-                <marker date="1522061385280" expanded="false" signature="1809:1815" ph=" }" />
-                <marker date="1522061385280" expanded="true" signature="1850:1861" ph=" { " />
-                <marker date="1522061385280" expanded="true" signature="1884:1890" ph=" }" />
-                <marker date="1522061385280" expanded="false" signature="1923:1934" ph=" { " />
-                <marker date="1522061385280" expanded="false" signature="1955:1961" ph=" }" />
-                <marker date="1522061385280" expanded="true" signature="2023:2281" ph="{...}" />
-                <marker date="1522061385280" expanded="true" signature="2309:2543" ph="{...}" />
-                <marker date="1522061385280" expanded="true" signature="2583:3163" ph="{...}" />
-                <marker date="1522061385280" expanded="true" signature="3194:3326" ph="{...}" />
-              </folding>
+            <state relative-caret-position="330">
+              <caret line="49" column="66" lean-forward="false" selection-start-line="49" selection-start-column="66" selection-end-line="49" selection-end-column="66" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -203,6 +129,8 @@
       <find>Epoch</find>
       <find>bias</find>
       <find>weight</find>
+      <find>learningRule</find>
+      <find>learn</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -216,7 +144,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/Main.java" />
         <option value="$PROJECT_DIR$/src/Main.java" />
         <option value="$PROJECT_DIR$/src/Main.java" />
         <option value="$PROJECT_DIR$/src/Z3Test.java" />
@@ -254,19 +181,20 @@
         <option value="$PROJECT_DIR$/src/main/java/Display/Graphics3D.java" />
         <option value="$PROJECT_DIR$/src/main/java/Display/Graphics2D.java" />
         <option value="$PROJECT_DIR$/src/main/java/Display/Graphics.java" />
-        <option value="$PROJECT_DIR$/input.txt" />
-        <option value="$PROJECT_DIR$/src/main/java/Tool/FileProcesser.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Tool/Utility.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Logics/NetParser.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Tool/Solution.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Main/Main.java" />
         <option value="$PROJECT_DIR$/src/main/java/Logics/Calculator.java" />
         <option value="$PROJECT_DIR$/src/main/java/Logics/InequalitiesSolver.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/TransferFunctionType.java" />
         <option value="$PROJECT_DIR$/src/main/java/Logics/NeuralNetwork3.java" />
         <option value="$PROJECT_DIR$/src/main/java/Logics/NeuralNetwork.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Tool/Utility.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Logics/XorMultiLayerPerceptronSample.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Logics/NetParser.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Tool/Solution.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Tool/FileProcesser.java" />
         <option value="$PROJECT_DIR$/src/main/java/Logics/NeuralNet.java" />
+        <option value="$PROJECT_DIR$/input.txt" />
+        <option value="$PROJECT_DIR$/src/main/java/Main/Main.java" />
       </list>
     </option>
   </component>
@@ -284,8 +212,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="1038" />
-    <option name="y" value="183" />
+    <option name="x" value="-9" />
+    <option name="y" value="-9" />
     <option name="width" value="976" />
     <option name="height" value="1038" />
   </component>
@@ -390,17 +318,6 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="NeuralNetworkSolver" type="b2602c69:ProjectViewProjectNode" />
-              <item name="NeuralNetworkSolver" type="462c0819:PsiDirectoryNode" />
-              <item name="target" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="NeuralNetworkSolver" type="b2602c69:ProjectViewProjectNode" />
-              <item name="NeuralNetworkSolver" type="462c0819:PsiDirectoryNode" />
-              <item name="target" type="462c0819:PsiDirectoryNode" />
-              <item name="classes" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -440,35 +357,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.NeuralNetwork3">
-    <configuration name="GraphicsAppBackup" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <option name="MAIN_CLASS_NAME" value="Display.GraphicsAppBackup" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="NeuralNetworkSolver" />
-      <envs />
-    </configuration>
-    <configuration name="JListTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <option name="MAIN_CLASS_NAME" value="Display.JListTest" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="NeuralNetworkSolver" />
-      <envs />
-    </configuration>
+  <component name="RunManager" selected="Application.Main">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <option name="MAIN_CLASS_NAME" value="Main.Main" />
@@ -502,25 +391,6 @@
       <module name="NeuralNetworkSolver" />
       <envs />
     </configuration>
-    <configuration name="NeuralNetwork2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="Logics.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="MAIN_CLASS_NAME" value="Logics.NeuralNetwork2" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="NeuralNetworkSolver" />
-      <envs />
-    </configuration>
     <configuration default="true" type="Application" factoryName="Application">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <option name="MAIN_CLASS_NAME" />
@@ -536,20 +406,14 @@
       <envs />
       <method />
     </configuration>
-    <list size="5">
+    <list size="2">
       <item index="0" class="java.lang.String" itemvalue="Application.Main" />
-      <item index="1" class="java.lang.String" itemvalue="Application.GraphicsAppBackup" />
-      <item index="2" class="java.lang.String" itemvalue="Application.JListTest" />
-      <item index="3" class="java.lang.String" itemvalue="Application.NeuralNetwork2" />
-      <item index="4" class="java.lang.String" itemvalue="Application.NeuralNetwork3" />
+      <item index="1" class="java.lang.String" itemvalue="Application.NeuralNetwork3" />
     </list>
     <recent_temporary>
-      <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Application.NeuralNetwork3" />
-        <item index="1" class="java.lang.String" itemvalue="Application.NeuralNetwork2" />
-        <item index="2" class="java.lang.String" itemvalue="Application.Main" />
-        <item index="3" class="java.lang.String" itemvalue="Application.JListTest" />
-        <item index="4" class="java.lang.String" itemvalue="Application.GraphicsAppBackup" />
+      <list size="2">
+        <item index="0" class="java.lang.String" itemvalue="Application.Main" />
+        <item index="1" class="java.lang.String" itemvalue="Application.NeuralNetwork3" />
       </list>
     </recent_temporary>
   </component>
@@ -585,7 +449,7 @@
       <workItem from="1521962804007" duration="10466000" />
       <workItem from="1522032990558" duration="2834000" />
       <workItem from="1522039397656" duration="8591000" />
-      <workItem from="1522058698806" duration="6813000" />
+      <workItem from="1522058698806" duration="21649000" />
     </task>
     <task id="LOCAL-00001" summary="chance">
       <created>1521871589630</created>
@@ -605,10 +469,11 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="130317000" />
+    <option name="totallyTimeSpent" value="145153000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -618,25 +483,25 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33295584" sideWeight="0.50214595" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.40430352" sideWeight="0.49785408" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.41223103" sideWeight="0.49785408" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22424893" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22424893" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295583" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29331824" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2446206" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295583" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -657,136 +522,8 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://E:/Java/jdk1.8.0_151/src.zip!/java/awt/image/ImageObserver.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="98" column="28" lean-forward="false" selection-start-line="98" selection-start-column="28" selection-end-line="98" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Display/Graphics3D.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="16" selection-end-column="5" />
-          <folding>
-            <element signature="e#357#358#0" expanded="false" />
-            <element signature="e#395#396#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Display/Graphics2D.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#332#333#0" expanded="false" />
-            <element signature="e#368#369#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Display/Graphics.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2014">
-          <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#1058#1391#0" expanded="false" />
-            <element signature="e#1390#1391#0" expanded="false" />
-            <element signature="e#2956#2957#0" expanded="false" />
-            <element signature="e#3034#3035#0" expanded="false" />
-            <element signature="e#3098#3099#0" expanded="false" />
-            <element signature="e#3163#3164#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/solutions20180325070954_9133.txt" />
-    <entry file="file://$PROJECT_DIR$/solutions201803250706432259.txt" />
-    <entry file="file://$PROJECT_DIR$/solutions20180325071058_2099.txt" />
-    <entry file="file://$PROJECT_DIR$/solutions20180325071559_3229.txt" />
-    <entry file="file://$PROJECT_DIR$/solutions20180325072231_1201.txt" />
     <entry file="file://$PROJECT_DIR$/test.log" />
-    <entry file="file://$PROJECT_DIR$/input.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="3" column="3" lean-forward="false" selection-start-line="3" selection-start-column="3" selection-end-line="3" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/solutions20180325080515_9346.txt" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/Tool/Utility.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="41" column="30" lean-forward="true" selection-start-line="41" selection-start-column="30" selection-end-line="41" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Tool/FileProcesser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="81" column="20" lean-forward="true" selection-start-line="81" selection-start-column="20" selection-end-line="81" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/weights.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Tool/Solution.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="810">
-          <caret line="72" column="0" lean-forward="false" selection-start-line="72" selection-start-column="0" selection-end-line="72" selection-end-column="0" />
-          <folding>
-            <element signature="method#Solution#0;class#Solution#0" expanded="false" />
-            <element signature="method#toString#0;class#Solution#0" expanded="false" />
-            <element signature="method#convertObjective#0;class#Solution#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Logics/NetParser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="51" column="37" lean-forward="false" selection-start-line="51" selection-start-column="37" selection-end-line="51" selection-end-column="37" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Main/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="123">
-          <caret line="45" column="18" lean-forward="false" selection-start-line="45" selection-start-column="18" selection-end-line="45" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Logics/InequalitiesSolver.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="96">
-          <caret line="33" column="66" lean-forward="false" selection-start-line="33" selection-start-column="66" selection-end-line="33" selection-end-column="66" />
-          <folding>
-            <element signature="method#solveInequality#0;class#InequalitiesSolver#0" expanded="false" />
-            <element signature="method#solveInequality#1;class#InequalitiesSolver#0" expanded="false" />
-            <element signature="method#processFunction#0;class#InequalitiesSolver#0" expanded="false" />
-            <element signature="method#processSymbol#0;class#InequalitiesSolver#0" expanded="false" />
-            <element signature="method#processNumerical#0;class#InequalitiesSolver#0" expanded="false" />
-            <element signature="method#processNumerical#1;class#InequalitiesSolver#0" expanded="false" />
-            <element signature="method#process#0;class#InequalitiesSolver#0" expanded="false" />
-            <element signature="method#convertToReduceFormula#0;class#InequalitiesSolver#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$PROJECT_DIR$/lib/joone-engine.jar!/org/joone/engine/LinearLayer.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="330">
@@ -866,9 +603,9 @@
         <state relative-caret-position="270">
           <caret line="21" column="5" lean-forward="false" selection-start-line="21" selection-start-column="5" selection-end-line="21" selection-end-column="5" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#207#208#0" expanded="true" />
-            <element signature="e#251#252#0" expanded="true" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#207#208#0" expanded="false" />
+            <element signature="e#251#252#0" expanded="false" />
             <element signature="method#meetConstraints#0;class#Calculator#0" expanded="false" />
             <element signature="method#meetConstraints#1;class#Calculator#0" expanded="false" />
           </folding>
@@ -915,34 +652,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://$PROJECT_DIR$/lib/neuroph-core-2.94.jar!/org/neuroph/core/transfer/RectifiedLinear.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="7" column="28" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/lib/neuroph-core-2.94.jar!/org/neuroph/util/TransferFunctionType.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="533">
-          <caret line="43" column="22" lean-forward="false" selection-start-line="43" selection-start-column="22" selection-end-line="43" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$PROJECT_DIR$/lib/neuroph-core-2.94.jar!/org/neuroph/util/NeuronFactory.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="173">
           <caret line="80" column="36" lean-forward="false" selection-start-line="80" selection-start-column="36" selection-end-line="80" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/lib/neuroph-core-2.94.jar!/org/neuroph/util/LayerFactory.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="523">
-          <caret line="25" column="29" lean-forward="false" selection-start-line="25" selection-start-column="29" selection-end-line="25" selection-end-column="29" />
           <folding />
         </state>
       </provider>
@@ -955,34 +668,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://$PROJECT_DIR$/lib/neuroph-core-2.94.jar!/org/neuroph/core/learning/LearningRule.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="20" column="22" lean-forward="false" selection-start-line="20" selection-start-column="22" selection-end-line="20" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Logics/NeuralNetwork2.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="389">
           <caret line="34" column="9" lean-forward="true" selection-start-line="24" selection-start-column="8" selection-end-line="34" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/lib/neuroph-core-2.94.jar!/org/neuroph/core/Layer.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="41">
-          <caret line="16" column="44" lean-forward="true" selection-start-line="16" selection-start-column="44" selection-end-line="16" selection-end-column="44" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/lib/neuroph-core-2.94.jar!/org/neuroph/nnet/learning/MomentumBackpropagation.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1366">
-          <caret line="17" column="11" lean-forward="false" selection-start-line="17" selection-start-column="11" selection-end-line="17" selection-end-column="11" />
           <folding />
         </state>
       </provider>
@@ -1029,32 +718,6 @@
         <state relative-caret-position="164">
           <caret line="29" column="16" lean-forward="false" selection-start-line="29" selection-start-column="16" selection-end-line="29" selection-end-column="16" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/lib/neuroph-core-2.94.jar!/org/neuroph/core/NeuralNetwork.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="194">
-          <caret line="197" column="22" lean-forward="true" selection-start-line="197" selection-start-column="22" selection-end-line="197" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/lib/neuroph-core-2.94.jar!/org/neuroph/nnet/MultiLayerPerceptron.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="107" column="22" lean-forward="false" selection-start-line="107" selection-start-column="22" selection-end-line="107" selection-end-column="22" />
-          <folding>
-            <marker date="1522061385280" expanded="false" signature="0:104" ph="/.../" />
-            <marker date="1522061385280" expanded="false" signature="140:848" ph="..." />
-            <marker date="1522061385280" expanded="true" signature="1042:1323" ph="{...}" />
-            <marker date="1522061385280" expanded="true" signature="1381:1934" ph="{...}" />
-            <marker date="1522061385280" expanded="true" signature="2035:2580" ph="{...}" />
-            <marker date="1522061385280" expanded="true" signature="2688:2961" ph="{...}" />
-            <marker date="1522061385280" expanded="true" signature="3061:3131" ph="{...}" />
-            <marker date="1522061385280" expanded="true" signature="3230:4561" ph="{...}" />
-            <marker date="1522061385280" expanded="true" signature="4604:4721" ph="{...}" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1128,15 +791,241 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Logics/NeuralNet.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/Logics/InequalitiesSolver.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="96">
+          <caret line="33" column="66" lean-forward="false" selection-start-line="33" selection-start-column="66" selection-end-line="33" selection-end-column="66" />
+          <folding>
+            <element signature="method#solveInequality#0;class#InequalitiesSolver#0" expanded="false" />
+            <element signature="method#solveInequality#1;class#InequalitiesSolver#0" expanded="false" />
+            <element signature="method#processFunction#0;class#InequalitiesSolver#0" expanded="false" />
+            <element signature="method#processSymbol#0;class#InequalitiesSolver#0" expanded="false" />
+            <element signature="method#processNumerical#0;class#InequalitiesSolver#0" expanded="false" />
+            <element signature="method#processNumerical#1;class#InequalitiesSolver#0" expanded="false" />
+            <element signature="method#process#0;class#InequalitiesSolver#0" expanded="false" />
+            <element signature="method#convertToReduceFormula#0;class#InequalitiesSolver#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/lib/neuroph-core-2.94.jar!/org/neuroph/nnet/learning/MomentumBackpropagation.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="17" column="11" lean-forward="false" selection-start-line="17" selection-start-column="11" selection-end-line="17" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/lib/neuroph-core-2.94.jar!/org/neuroph/core/learning/LearningRule.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="96" column="30" lean-forward="false" selection-start-line="96" selection-start-column="25" selection-end-line="96" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/lib/neuroph-core-2.94.jar!/org/neuroph/core/learning/stop/StopCondition.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
-          <caret line="65" column="0" lean-forward="false" selection-start-line="65" selection-start-column="0" selection-end-line="65" selection-end-column="0" />
+          <caret line="8" column="12" lean-forward="false" selection-start-line="8" selection-start-column="12" selection-end-line="8" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/lib/neuroph-core-2.94.jar!/org/neuroph/nnet/learning/LMS.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-378">
+          <caret line="15" column="37" lean-forward="false" selection-start-line="15" selection-start-column="37" selection-end-line="15" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/lib/neuroph-core-2.94.jar!/org/neuroph/nnet/learning/BackPropagation.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="14" column="39" lean-forward="false" selection-start-line="14" selection-start-column="39" selection-end-line="14" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/lib/neuroph-core-2.94.jar!/org/neuroph/core/learning/IterativeLearning.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="146">
+          <caret line="75" column="31" lean-forward="false" selection-start-line="75" selection-start-column="17" selection-end-line="75" selection-end-column="31" />
+          <folding>
+            <element signature="e#1393#1394#0" expanded="true" />
+            <element signature="e#1434#1435#0" expanded="true" />
+            <element signature="e#1563#1564#0" expanded="true" />
+            <element signature="e#1607#1608#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/lib/neuroph-core-2.94.jar!/org/neuroph/core/learning/SupervisedLearning.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="282">
+          <caret line="41" column="33" lean-forward="true" selection-start-line="41" selection-start-column="33" selection-end-line="41" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Logics/XorMultiLayerPerceptronSample.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="387">
+          <caret line="84" column="87" lean-forward="true" selection-start-line="83" selection-start-column="11" selection-end-line="84" selection-end-column="87" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://E:/Java/jdk1.8.0_151/src.zip!/java/util/Arrays.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="3378" column="27" lean-forward="false" selection-start-line="3378" selection-start-column="27" selection-end-line="3378" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/lib/neuroph-core-2.94.jar!/org/neuroph/core/NeuralNetwork.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="121" column="20" lean-forward="false" selection-start-line="121" selection-start-column="20" selection-end-line="121" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/lib/neuroph-core-2.94.jar!/org/neuroph/core/transfer/RectifiedLinear.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/lib/neuroph-core-2.94.jar!/org/neuroph/util/TransferFunctionType.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="282">
+          <caret line="65" column="26" lean-forward="false" selection-start-line="65" selection-start-column="26" selection-end-line="65" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/lib/neuroph-core-2.94.jar!/org/neuroph/core/Layer.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="52">
+          <caret line="52" column="22" lean-forward="false" selection-start-line="52" selection-start-column="22" selection-end-line="52" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/lib/neuroph-core-2.94.jar!/org/neuroph/util/LayerFactory.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="192">
+          <caret line="18" column="29" lean-forward="true" selection-start-line="18" selection-start-column="29" selection-end-line="18" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Tool/Solution.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="277">
+          <caret line="16" column="9" lean-forward="true" selection-start-line="16" selection-start-column="9" selection-end-line="16" selection-end-column="9" />
+          <folding>
+            <element signature="method#toString#0;class#Solution#0" expanded="false" />
+            <element signature="method#convertObjective#0;class#Solution#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/lib/neuroph-core-2.94.jar!/org/neuroph/nnet/MultiLayerPerceptron.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="322">
+          <caret line="92" column="37" lean-forward="false" selection-start-line="92" selection-start-column="37" selection-end-line="92" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://E:/Java/jdk1.8.0_151/src.zip!/java/io/OutputStreamWriter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="192" column="16" lean-forward="false" selection-start-line="192" selection-start-column="16" selection-end-line="192" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://E:/Java/jdk1.8.0_151/src.zip!/java/io/Writer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="382">
+          <caret line="179" column="16" lean-forward="false" selection-start-line="179" selection-start-column="16" selection-end-line="179" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Logics/NetParser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="780">
+          <caret line="44" column="0" lean-forward="true" selection-start-line="44" selection-start-column="0" selection-end-line="44" selection-end-column="0" />
+          <folding>
+            <element signature="method#calculateLayer#0;class#NetParser#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Logics/NeuralNet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="327">
+          <caret line="44" column="0" lean-forward="true" selection-start-line="44" selection-start-column="0" selection-end-line="44" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#615#616#0" expanded="true" />
-            <element signature="e#652#653#0" expanded="true" />
+            <element signature="method#NeuralNet#0;class#NeuralNet#0" expanded="false" />
+            <element signature="method#train#0;class#NeuralNet#0" expanded="false" />
+            <element signature="method#calculate#0;class#NeuralNet#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Tool/FileProcesser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="183">
+          <caret line="63" column="52" lean-forward="false" selection-start-line="63" selection-start-column="52" selection-end-line="63" selection-end-column="52" />
+          <folding>
+            <element signature="method#readInput#0;class#FileProcesser#0" expanded="false" />
+            <element signature="method#recordSolution#0;class#FileProcesser#0" expanded="false" />
+            <element signature="method#recordLayer#0;class#FileProcesser#0" expanded="false" />
+            <element signature="method#closeFile#0;class#FileProcesser#0" expanded="false" />
+            <element signature="method#getRandomFileName#0;class#FileProcesser#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/input.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="3" column="5" lean-forward="false" selection-start-line="3" selection-start-column="5" selection-end-line="3" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Main/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="49" column="66" lean-forward="false" selection-start-line="49" selection-start-column="66" selection-end-line="49" selection-end-column="66" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/weights.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="6" column="0" lean-forward="true" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Tool/Utility.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="217">
+          <caret line="9" column="66" lean-forward="false" selection-start-line="9" selection-start-column="66" selection-end-line="9" selection-end-column="66" />
+          <folding />
         </state>
       </provider>
     </entry>

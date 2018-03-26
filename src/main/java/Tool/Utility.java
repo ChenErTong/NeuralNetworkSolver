@@ -5,9 +5,9 @@ import java.util.Map;
 
 public class Utility {
     public static final String WEIGHT_PATH = "weights.txt";
-    public static final String BIAS_PATH = "biases.txt";
     public static final String INPUT_PATH = "input.txt";
     public static final String RECORD_PATH = "solutions";
+    public static final String NETWORK_PATH = "myMlPerceptron.nnet";
     public static final String MATHEMATICA_PATH = "E:\\Wolfram Research\\Mathematica\\11.2\\mathkernel.exe";
 
     public static final int[][] RANGE2D = new int[][]{{-100, 100}, {-100, 100}};
