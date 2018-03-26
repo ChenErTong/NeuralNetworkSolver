@@ -49,7 +49,7 @@ public class NetParser {
     private void calculateNet(double[][] input_layer, List<double[][]> weights, List<double[][]> biases, int layer_index, int layer_nubmer, List<double[]> condition){
         //如果已经计算到最后一层，则将结果记录后返回
         if(layer_index == layer_nubmer) {
-            Solution solution = new Solution(input_layer[1], condition);
+            Solution solution = new Solution(input_layer, condition);
             solutions.add(solution);
             return;
         }

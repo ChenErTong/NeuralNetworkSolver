@@ -34,7 +34,7 @@ public class InequalitiesSolver {
             if(!(formula = solveInequality(solution.getInput_number(), solution.getConstraint())).equals("Impossible")){
                 solution.setSolutionSet(formula);
                 listWithSolution.add(solution);
-                mapWithSolution.put(solution.getObjective(), formula);
+                mapWithSolution.put(Arrays.toString(solution.getObjectives()), formula);
             }
         }
 

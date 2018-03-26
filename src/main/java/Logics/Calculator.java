@@ -13,7 +13,15 @@ public class Calculator {
         checkCache = new HashMap<>();
     }
 
-    public Solution calculateResult(List<Solution> solutions, double[] input){
+    public double[] calculateOutout(String[] objective, double[] input){
+        double[] output = new double[objective.length];
+        for (int i = 0; i < output.length; ++i){
+            output[i] = calculateInput(objective[i], input);
+        }
+        return output;
+    }
+
+    public Solution selectSolution(List<Solution> solutions, double[] input){
         checkCache.clear();
 
         for (Solution solution: solutions) {
@@ -46,7 +54,7 @@ public class Calculator {
         return checkCache.get(constraint);
     }
 
-    public double calculateInput(String objective, double[] input){
+    private double calculateInput(String objective, double[] input){
         String[] paras = objective.split(" \\+ ");
         double left = Double.parseDouble(paras[input.length]);
         for (int i = 0; i < input.length; ++i){

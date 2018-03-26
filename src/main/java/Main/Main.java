@@ -1,6 +1,5 @@
 package Main;
 
-import Display.Graphics2D;
 import Logics.Calculator;
 import Logics.InequalitiesSolver;
 import Logics.NetParser;
@@ -9,9 +8,7 @@ import Tool.FileProcesser;
 import Tool.Utility;
 
 import java.util.Arrays;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 public class Main {
     public static void main(String[] args){
@@ -48,11 +45,11 @@ public class Main {
         for (double[] input: inputs) {
             FileProcesser.writeToFile(Arrays.toString(input) + ": ");
 
-            Solution solution = calculator.calculateResult(solutions, input);
+            Solution solution = calculator.selectSolution(solutions, input);
             if(solution == null){
                 FileProcesser.writeToFile("No Solution Set Satisfied.\n");
             }else{
-                FileProcesser.writeToFile(solution.getSolutionSet() + ": " + Double.toString(calculator.calculateInput(solution.getObjective(), input)) + "\n");
+                FileProcesser.writeToFile(solution.getSolutionSet() + ": " + Arrays.toString(calculator.calculateOutout(solution.getObjectives(), input)) + "\n");
             }
         }
         closeTime = endTime = System.currentTimeMillis();

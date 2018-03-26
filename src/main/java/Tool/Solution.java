@@ -4,14 +4,17 @@ import java.util.List;
 
 public class Solution {
     private int input_number;
-    private String objective;
+    private String[] objectives;
     private String[] constraints;
     private String constraint;
     private String solutionSet;
 
-    public Solution(double[] ob, List<double[]> cons){
-        input_number = ob.length - 1;
-        objective = convertObjective(ob);
+    public Solution(double[][] ob, List<double[]> cons){
+        input_number = ob[1].length - 1;
+        objectives = new String[ob.length - 1];
+        for (int i = 1; i < ob.length; ++i){
+            objectives[i - 1] = convertObjective(ob[i]);
+        }
         constraints = new String[cons.size()];
         for (int i = 0; i < constraints.length; ++i)
             constraints[i] = convertConstraints(cons.get(i));
@@ -33,8 +36,8 @@ public class Solution {
         return input_number;
     }
 
-    public String getObjective(){
-        return objective;
+    public String[] getObjectives(){
+        return objectives;
     }
 
     public String getConstraint(){
@@ -50,8 +53,11 @@ public class Solution {
     }
 
     public String toString(){
-        StringBuilder sb = new StringBuilder("Objective:\n");
-        sb.append(objective);
+        StringBuilder sb = new StringBuilder("Objective:");
+        for (String objective: objectives) {
+            sb.append("\n");
+            sb.append(objective);
+        }
         sb.append("\nConstraints:");
         for (String c: constraints) {
             sb.append("\n");
