@@ -38,11 +38,6 @@ public class NeuralNet implements LearningEventListener{
 
         inputs = FileProcesser.readInput(Utility.INPUT_PATH).toArray(new double[1][1]);
 
-//        [0.5, 0.5]: X1<=0.79&&0.01*(-44.00+66.00*X1)<X2<0.01*(137.00+-145.00*X1)||0.79<X1<0.80&&0.01*(-44.00+66.00*X1)<X2<0.33*(49.00+-61.00*X1): [-0.06499999999999995]
-//[0.0, 0.5]: X1<=0.79&&0.01*(-44.00+66.00*X1)<X2<0.01*(137.00+-145.00*X1)||0.79<X1<0.80&&0.01*(-44.00+66.00*X1)<X2<0.33*(49.00+-61.00*X1): [0.795]
-//[0.5, 0.1]: X1<=0.79&&0.01*(-44.00+66.00*X1)<X2<0.01*(137.00+-145.00*X1)||0.79<X1<0.80&&0.01*(-44.00+66.00*X1)<X2<0.33*(49.00+-61.00*X1): [0.12300000000000004]
-//[0.1, 0.5]: X1<=0.79&&0.01*(-44.00+66.00*X1)<X2<0.01*(137.00+-145.00*X1)||0.79<X1<0.80&&0.01*(-44.00+66.00*X1)<X2<0.33*(49.00+-61.00*X1): [0.623]
-
         outputs = net.calculate(inputs);
         for (int i = 0; i < inputs.length; i++) {
             System.out.println(Arrays.toString(inputs[i]) + ", " + Arrays.toString(outputs[i]));
@@ -81,7 +76,7 @@ public class NeuralNet implements LearningEventListener{
         return true;
     }
 
-    public void outputWeights(){
+    public List<String> outputWeights(){
         List<String> weights = new ArrayList<>();
         List<Layer> layers = network.getLayers();
         for(int i = 1; i < layers.size() - 1; ++i){
@@ -98,7 +93,7 @@ public class NeuralNet implements LearningEventListener{
             weights.add(weight.substring(1, weight.length() - 1) + "\n");
         }
 
-        FileProcesser.recordParameter(weights, Utility.WEIGHT_PATH);
+        return weights;
     }
 
     public double[][] calculate(double[][] inputs){

@@ -1,5 +1,6 @@
 package Tool;
 
+import java.util.Arrays;
 import java.util.List;
 
 public class Solution {
@@ -16,8 +17,9 @@ public class Solution {
             objectives[i] = convertObjective(ob[i]);
         }
         constraints = new String[cons.size()];
-        for (int i = 0; i < constraints.length; ++i)
+        for (int i = 0; i < constraints.length; ++i){
             constraints[i] = convertConstraints(cons.get(i));
+        }
 
         StringBuilder sb = new StringBuilder();
         for (String constraint: constraints){
@@ -74,12 +76,12 @@ public class Solution {
         StringBuilder sb = new StringBuilder();
         int i = 0;
         for (; i < ob.length - 1; ++i){
-            sb.append(String.format("%.2f", ob[i]));
+            sb.append(ob[i]);
             sb.append(" * X");
             sb.append(i + 1);
             sb.append(" + ");
         }
-        sb.append(String.format("%.2f", ob[i]));
+        sb.append(ob[i]);
         return sb.toString();
     }
 

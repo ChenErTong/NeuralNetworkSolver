@@ -92,7 +92,7 @@ public class FileProcesser {
         writeToFile(comment + ": ");
         for (double[] node: layer) {
             for (double parameter: node) {
-                writeToFile(String.format("%.2f", parameter) + " ");
+                writeToFile(parameter + " ");
             }
             writeToFile("; ");
         }

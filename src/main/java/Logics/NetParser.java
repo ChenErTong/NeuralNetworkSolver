@@ -3,6 +3,7 @@ package Logics;
 import Tool.Solution;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class NetParser {
@@ -22,9 +23,8 @@ public class NetParser {
         int input_number = calculateInputNumber(weights);
 
         double[][] input_layer = new double[input_number + 1][input_number + 1];
-        input_layer[0][input_number] = 1;
-        for (int i = 1; i <= input_number; ++i)
-            input_layer[i][i - 1] = 1;
+        for (int i = 0; i <= input_number; ++i)
+            input_layer[i][i] = 1;
 
         calculateNet(input_layer, weights, 0, weights.size(), new ArrayList<>());
 
@@ -74,10 +74,11 @@ public class NetParser {
         //考虑多个输入的情况，node元素个数应该为每组输入数据元素个数加1
         double[] node = new double[cache[0][0][0].length];
 
-        for (int i = length - 1; i >= 0; --i){
-            boolean isZero = (relu_tag % 2 == 1);
+        node = addDoubleArray(node, cache[output_node_index][length - 1][1]);
+        for (int i = 0; i < length - 1; ++i){
+            boolean isOne = (relu_tag % 2 == 1);
             relu_tag /= 2;
-            if(isZero){
+            if(isOne){
                 node = addDoubleArray(node, cache[output_node_index][i][0]);
             }else{
                 node = addDoubleArray(node, cache[output_node_index][i][1]);
@@ -97,10 +98,10 @@ public class NetParser {
 
     private List<double[]> attainCondition(double[][] input_layer, int relu_tag){
         List<double[]> result = new ArrayList<>();
-        for (int i = input_layer.length - 1; i > 0; --i){
-            boolean isZero = (relu_tag % 2 == 1);
+        for (int i = 0; i < input_layer.length - 1; ++i){
+            boolean isOne = (relu_tag % 2 == 1);
             relu_tag /= 2;
-            if(isZero){
+            if(isOne){
                 double[] cache = new double[input_layer[i].length];
                 for (int j = 0; j < cache.length; ++j){
                     cache[j] = -input_layer[i][j];
@@ -124,6 +125,7 @@ public class NetParser {
                 }
             }
         }
+
         return cache;
     }
 

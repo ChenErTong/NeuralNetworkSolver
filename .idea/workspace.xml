@@ -3,21 +3,17 @@
   <component name="ChangeListManager">
     <list default="true" id="f9c9a5e8-6abf-4a30-8fef-3c4c1355ccd1" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/biases.txt" afterPath="" />
       <change beforePath="$PROJECT_DIR$/input.txt" afterPath="$PROJECT_DIR$/input.txt" />
-      <change beforePath="$PROJECT_DIR$/myMlPerceptron.nnet" afterPath="" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Logics/NetParser.java" afterPath="$PROJECT_DIR$/src/main/java/Logics/NetParser.java" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Logics/NeuralNet.java" afterPath="$PROJECT_DIR$/src/main/java/Logics/NeuralNet.java" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Main/Main.java" afterPath="$PROJECT_DIR$/src/main/java/Main/Main.java" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Tool/FileProcesser.java" afterPath="$PROJECT_DIR$/src/main/java/Tool/FileProcesser.java" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Tool/Solution.java" afterPath="$PROJECT_DIR$/src/main/java/Tool/Solution.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Tool/Utility.java" afterPath="$PROJECT_DIR$/src/main/java/Tool/Utility.java" />
       <change beforePath="$PROJECT_DIR$/target/classes/Logics/NetParser.class" afterPath="$PROJECT_DIR$/target/classes/Logics/NetParser.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Logics/NeuralNetwork2.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Logics/NeuralNetwork3.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Logics/NeuralNet.class" afterPath="$PROJECT_DIR$/target/classes/Logics/NeuralNet.class" />
       <change beforePath="$PROJECT_DIR$/target/classes/Main/Main.class" afterPath="$PROJECT_DIR$/target/classes/Main/Main.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Tool/Utility.class" afterPath="$PROJECT_DIR$/target/classes/Tool/Utility.class" />
-      <change beforePath="$PROJECT_DIR$/weights.txt" afterPath="$PROJECT_DIR$/weights.txt" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Tool/FileProcesser.class" afterPath="$PROJECT_DIR$/target/classes/Tool/FileProcesser.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Tool/Solution.class" afterPath="$PROJECT_DIR$/target/classes/Tool/Solution.class" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -34,81 +30,33 @@
       <file leaf-file-name="NetParser.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/Logics/NetParser.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="780">
-              <caret line="44" column="0" lean-forward="true" selection-start-line="44" selection-start-column="0" selection-end-line="44" selection-end-column="0" />
+            <state relative-caret-position="250">
+              <caret line="86" column="0" lean-forward="false" selection-start-line="86" selection-start-column="0" selection-end-line="86" selection-end-column="0" />
               <folding>
-                <element signature="method#calculateLayer#0;class#NetParser#0" expanded="false" />
+                <element signature="method#calculateInputNumber#0;class#NetParser#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="NeuralNet.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/Logics/NeuralNet.java">
+      <file leaf-file-name="Solution.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/Tool/Solution.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="327">
-              <caret line="44" column="0" lean-forward="true" selection-start-line="44" selection-start-column="0" selection-end-line="44" selection-end-column="0" />
+            <state relative-caret-position="300">
+              <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="method#NeuralNet#0;class#NeuralNet#0" expanded="false" />
-                <element signature="method#train#0;class#NeuralNet#0" expanded="false" />
-                <element signature="method#calculate#0;class#NeuralNet#0" expanded="false" />
+                <element signature="method#toString#0;class#Solution#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="weights.txt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/weights.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="6" column="0" lean-forward="true" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Utility.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/Tool/Utility.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="217">
-              <caret line="9" column="66" lean-forward="false" selection-start-line="9" selection-start-column="66" selection-end-line="9" selection-end-column="66" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="FileProcesser.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/Tool/FileProcesser.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="183">
-              <caret line="63" column="52" lean-forward="false" selection-start-line="63" selection-start-column="52" selection-end-line="63" selection-end-column="52" />
-              <folding>
-                <element signature="method#readInput#0;class#FileProcesser#0" expanded="false" />
-                <element signature="method#recordSolution#0;class#FileProcesser#0" expanded="false" />
-                <element signature="method#recordLayer#0;class#FileProcesser#0" expanded="false" />
-                <element signature="method#closeFile#0;class#FileProcesser#0" expanded="false" />
-                <element signature="method#getRandomFileName#0;class#FileProcesser#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="input.txt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/input.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="3" column="5" lean-forward="false" selection-start-line="3" selection-start-column="5" selection-end-line="3" selection-end-column="5" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/Main/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="49" column="66" lean-forward="false" selection-start-line="49" selection-start-column="66" selection-end-line="49" selection-end-column="66" />
+            <state relative-caret-position="-1229">
+              <caret line="23" column="23" lean-forward="true" selection-start-line="22" selection-start-column="0" selection-end-line="23" selection-end-column="23" />
               <folding />
             </state>
           </provider>
@@ -131,6 +79,7 @@
       <find>weight</find>
       <find>learningRule</find>
       <find>learn</find>
+      <find>2f</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -144,7 +93,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/Main.java" />
         <option value="$PROJECT_DIR$/src/Main.java" />
         <option value="$PROJECT_DIR$/src/Z3Test.java" />
         <option value="$PROJECT_DIR$/src/main/java/Z3Test.java" />
@@ -189,11 +137,12 @@
         <option value="$PROJECT_DIR$/src/main/java/Logics/NeuralNetwork.java" />
         <option value="$PROJECT_DIR$/src/main/java/Tool/Utility.java" />
         <option value="$PROJECT_DIR$/src/main/java/Logics/XorMultiLayerPerceptronSample.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Logics/NetParser.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Tool/Solution.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Tool/FileProcesser.java" />
         <option value="$PROJECT_DIR$/src/main/java/Logics/NeuralNet.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Tool/FileProcesser.java" />
         <option value="$PROJECT_DIR$/input.txt" />
+        <option value="$PROJECT_DIR$/weights.txt" />
+        <option value="$PROJECT_DIR$/src/main/java/Tool/Solution.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Logics/NetParser.java" />
         <option value="$PROJECT_DIR$/src/main/java/Main/Main.java" />
       </list>
     </option>
@@ -235,10 +184,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scratches" />
-      <pane id="Scope" />
       <pane id="AndroidView" />
+      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -322,6 +270,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -407,13 +356,12 @@
       <method />
     </configuration>
     <list size="2">
-      <item index="0" class="java.lang.String" itemvalue="Application.Main" />
-      <item index="1" class="java.lang.String" itemvalue="Application.NeuralNetwork3" />
+      <item index="0" class="java.lang.String" itemvalue="Application.NeuralNet" />
+      <item index="1" class="java.lang.String" itemvalue="Application.Main" />
     </list>
     <recent_temporary>
-      <list size="2">
+      <list size="1">
         <item index="0" class="java.lang.String" itemvalue="Application.Main" />
-        <item index="1" class="java.lang.String" itemvalue="Application.NeuralNetwork3" />
       </list>
     </recent_temporary>
   </component>
@@ -449,7 +397,8 @@
       <workItem from="1521962804007" duration="10466000" />
       <workItem from="1522032990558" duration="2834000" />
       <workItem from="1522039397656" duration="8591000" />
-      <workItem from="1522058698806" duration="21649000" />
+      <workItem from="1522058698806" duration="22251000" />
+      <workItem from="1522119362279" duration="7826000" />
     </task>
     <task id="LOCAL-00001" summary="chance">
       <created>1521871589630</created>
@@ -469,7 +418,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="145153000" />
+    <option name="totallyTimeSpent" value="153581000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
@@ -483,12 +432,12 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33295584" sideWeight="0.50214595" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.41223103" sideWeight="0.49785408" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26613817" sideWeight="0.49785408" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22424893" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2274678" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295583" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -522,74 +471,16 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/test.log" />
     <entry file="file://$PROJECT_DIR$/solutions20180325080515_9346.txt" />
-    <entry file="jar://$PROJECT_DIR$/lib/joone-engine.jar!/org/joone/engine/LinearLayer.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="18" column="11" lean-forward="false" selection-start-line="18" selection-start-column="11" selection-end-line="18" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/lib/joone-engine.jar!/org/joone/net/NeuralNet.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="47" column="19" lean-forward="false" selection-start-line="47" selection-start-column="19" selection-end-line="47" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/lib/joone-engine.jar!/org/joone/io/MemoryInputSynapse.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="13" column="11" lean-forward="false" selection-start-line="13" selection-start-column="11" selection-end-line="13" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/lib/joone-engine.jar!/org/joone/engine/SoftmaxLayer.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="10" column="11" lean-forward="false" selection-start-line="10" selection-start-column="11" selection-end-line="10" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/lib/joone-engine.jar!/org/joone/io/MemoryOutputSynapse.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="63" column="31" lean-forward="false" selection-start-line="63" selection-start-column="31" selection-end-line="63" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/lib/joone-engine.jar!/org/joone/engine/Pattern.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1470">
-          <caret line="9" column="13" lean-forward="false" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/lib/joone-engine.jar!/org/joone/engine/Monitor.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="222" column="18" lean-forward="false" selection-start-line="222" selection-start-column="18" selection-end-line="222" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/lib/joone-engine.jar!/org/joone/engine/SigmoidLayer.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="840">
-          <caret line="33" column="9" lean-forward="false" selection-start-line="33" selection-start-column="9" selection-end-line="33" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/lib/joone-engine.jar!/org/joone/engine/FullSynapse.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="jar://$PROJECT_DIR$/lib/joone-engine.jar!/org/joone/engine/LinearLayer.class" />
+    <entry file="jar://$PROJECT_DIR$/lib/joone-engine.jar!/org/joone/net/NeuralNet.class" />
+    <entry file="jar://$PROJECT_DIR$/lib/joone-engine.jar!/org/joone/io/MemoryInputSynapse.class" />
+    <entry file="jar://$PROJECT_DIR$/lib/joone-engine.jar!/org/joone/engine/SoftmaxLayer.class" />
+    <entry file="jar://$PROJECT_DIR$/lib/joone-engine.jar!/org/joone/io/MemoryOutputSynapse.class" />
+    <entry file="jar://$PROJECT_DIR$/lib/joone-engine.jar!/org/joone/engine/Pattern.class" />
+    <entry file="jar://$PROJECT_DIR$/lib/joone-engine.jar!/org/joone/engine/Monitor.class" />
+    <entry file="jar://$PROJECT_DIR$/lib/joone-engine.jar!/org/joone/engine/SigmoidLayer.class" />
+    <entry file="jar://$PROJECT_DIR$/lib/joone-engine.jar!/org/joone/engine/FullSynapse.class" />
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
@@ -616,7 +507,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-619">
           <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -624,7 +514,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
           <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -632,7 +521,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
           <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -640,7 +528,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
           <caret line="9" column="22" lean-forward="false" selection-start-line="9" selection-start-column="22" selection-end-line="9" selection-end-column="22" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -648,7 +535,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
           <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -656,52 +542,15 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="173">
           <caret line="80" column="36" lean-forward="false" selection-start-line="80" selection-start-column="36" selection-end-line="80" selection-end-column="36" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/neuroph/util/TransferFunctionType.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="18" column="0" lean-forward="true" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Logics/NeuralNetwork2.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="389">
-          <caret line="34" column="9" lean-forward="true" selection-start-line="24" selection-start-column="8" selection-end-line="34" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/neuroph/util/TransferFunctionType.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/Logics/NeuralNetwork2.java" />
     <entry file="jar://$PROJECT_DIR$/lib/neuroph-core-2.94.jar!/org/neuroph/core/Connection.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="810">
           <caret line="31" column="35" lean-forward="false" selection-start-line="31" selection-start-column="35" selection-end-line="31" selection-end-column="35" />
-          <folding>
-            <marker date="1522061385280" expanded="false" signature="0:104" ph="/.../" />
-            <marker date="1522061385280" expanded="false" signature="140:187" ph="..." />
-            <marker date="1522061385280" expanded="true" signature="444:896" ph="{...}" />
-            <marker date="1522061385280" expanded="true" signature="971:1188" ph="{...}" />
-            <marker date="1522061385280" expanded="true" signature="1266:1332" ph="{...}" />
-            <marker date="1522061385280" expanded="false" signature="1363:1374" ph=" { " />
-            <marker date="1522061385280" expanded="false" signature="1393:1399" ph=" }" />
-            <marker date="1522061385280" expanded="true" signature="1442:1623" ph="{...}" />
-            <marker date="1522061385280" expanded="false" signature="1653:1664" ph=" { " />
-            <marker date="1522061385280" expanded="false" signature="1699:1705" ph=" }" />
-            <marker date="1522061385280" expanded="false" signature="1743:1754" ph=" { " />
-            <marker date="1522061385280" expanded="false" signature="1809:1815" ph=" }" />
-            <marker date="1522061385280" expanded="true" signature="1850:1861" ph=" { " />
-            <marker date="1522061385280" expanded="true" signature="1884:1890" ph=" }" />
-            <marker date="1522061385280" expanded="false" signature="1923:1934" ph=" { " />
-            <marker date="1522061385280" expanded="false" signature="1955:1961" ph=" }" />
-            <marker date="1522061385280" expanded="true" signature="2023:2281" ph="{...}" />
-            <marker date="1522061385280" expanded="true" signature="2309:2543" ph="{...}" />
-            <marker date="1522061385280" expanded="true" signature="2583:3163" ph="{...}" />
-            <marker date="1522061385280" expanded="true" signature="3194:3326" ph="{...}" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -709,7 +558,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
           <caret line="13" column="11" lean-forward="false" selection-start-line="13" selection-start-column="11" selection-end-line="13" selection-end-column="11" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -717,7 +565,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="164">
           <caret line="29" column="16" lean-forward="false" selection-start-line="29" selection-start-column="16" selection-end-line="29" selection-end-column="16" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -725,69 +572,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="161">
           <caret line="20" column="46" lean-forward="false" selection-start-line="20" selection-start-column="46" selection-end-line="20" selection-end-column="46" />
-          <folding>
-            <marker date="1522061385280" expanded="false" signature="0:104" ph="/.../" />
-            <marker date="1522061385280" expanded="false" signature="140:417" ph="..." />
-            <marker date="1522061385280" expanded="true" signature="938:1133" ph="{...}" />
-            <marker date="1522061385280" expanded="true" signature="1217:1708" ph="{...}" />
-            <marker date="1522061385280" expanded="true" signature="1738:1896" ph="{...}" />
-            <marker date="1522061385280" expanded="true" signature="1922:1988" ph="{...}" />
-            <marker date="1522061385280" expanded="false" signature="2028:2039" ph=" { " />
-            <marker date="1522061385280" expanded="false" signature="2063:2069" ph=" }" />
-            <marker date="1522061385280" expanded="false" signature="2102:2113" ph=" { " />
-            <marker date="1522061385280" expanded="false" signature="2136:2142" ph=" }" />
-            <marker date="1522061385280" expanded="false" signature="2173:2184" ph=" { " />
-            <marker date="1522061385280" expanded="false" signature="2203:2209" ph=" }" />
-            <marker date="1522061385280" expanded="false" signature="2251:2262" ph=" { " />
-            <marker date="1522061385280" expanded="false" signature="2302:2308" ph=" }" />
-            <marker date="1522061385280" expanded="true" signature="2366:2679" ph="{...}" />
-            <marker date="1522061385280" expanded="true" signature="2738:3055" ph="{...}" />
-            <marker date="1522061385280" expanded="true" signature="3115:3665" ph="{...}" />
-            <marker date="1522061385280" expanded="true" signature="3721:3839" ph="{...}" />
-            <marker date="1522061385280" expanded="true" signature="3913:4042" ph="{...}" />
-            <marker date="1522061385280" expanded="true" signature="4106:4540" ph="{...}" />
-            <marker date="1522061385280" expanded="false" signature="4597:4608" ph=" { " />
-            <marker date="1522061385280" expanded="false" signature="4637:4643" ph=" }" />
-            <marker date="1522061385280" expanded="false" signature="4698:4709" ph=" { " />
-            <marker date="1522061385280" expanded="false" signature="4736:4742" ph=" }" />
-            <marker date="1522061385280" expanded="false" signature="4801:4812" ph=" { " />
-            <marker date="1522061385280" expanded="false" signature="4847:4853" ph=" }" />
-            <marker date="1522061385280" expanded="false" signature="4913:4924" ph=" { " />
-            <marker date="1522061385280" expanded="false" signature="4957:4963" ph=" }" />
-            <marker date="1522061385280" expanded="true" signature="5026:5376" ph="{...}" />
-            <marker date="1522061385280" expanded="true" signature="5436:5778" ph="{...}" />
-            <marker date="1522061385280" expanded="false" signature="5823:5834" ph=" { " />
-            <marker date="1522061385280" expanded="false" signature="5864:5870" ph=" }" />
-            <marker date="1522061385280" expanded="false" signature="5916:5927" ph=" { " />
-            <marker date="1522061385280" expanded="false" signature="5955:5961" ph=" }" />
-            <marker date="1522061385280" expanded="true" signature="6002:6094" ph="{...}" />
-            <marker date="1522061385280" expanded="true" signature="6155:6481" ph="{...}" />
-            <marker date="1522061385280" expanded="false" signature="6544:6555" ph=" { " />
-            <marker date="1522061385280" expanded="false" signature="6590:6596" ph=" }" />
-            <marker date="1522061385280" expanded="false" signature="6668:6679" ph=" { " />
-            <marker date="1522061385280" expanded="false" signature="6720:6726" ph=" }" />
-            <marker date="1522061385280" expanded="false" signature="6771:6782" ph=" { " />
-            <marker date="1522061385280" expanded="false" signature="6808:6814" ph=" }" />
-            <marker date="1522061385280" expanded="false" signature="6865:6876" ph=" { " />
-            <marker date="1522061385280" expanded="false" signature="6905:6911" ph=" }" />
-            <marker date="1522061385280" expanded="false" signature="6957:6968" ph=" { " />
-            <marker date="1522061385280" expanded="false" signature="6994:7000" ph=" }" />
-            <marker date="1522061385280" expanded="false" signature="7035:7046" ph=" { " />
-            <marker date="1522061385280" expanded="false" signature="7070:7076" ph=" }" />
-            <marker date="1522061385280" expanded="true" signature="7111:7368" ph="{...}" />
-            <marker date="1522061385280" expanded="false" signature="7398:7409" ph=" { " />
-            <marker date="1522061385280" expanded="false" signature="7427:7433" ph=" }" />
-            <marker date="1522061385280" expanded="false" signature="7473:7484" ph=" { " />
-            <marker date="1522061385280" expanded="false" signature="7503:7509" ph=" }" />
-            <marker date="1522061385280" expanded="false" signature="7551:7562" ph=" { " />
-            <marker date="1522061385280" expanded="false" signature="7583:7589" ph=" }" />
-            <marker date="1522061385280" expanded="true" signature="7639:7861" ph="{...}" />
-            <marker date="1522061385280" expanded="false" signature="7891:7902" ph=" { " />
-            <marker date="1522061385280" expanded="false" signature="7920:7926" ph=" }" />
-            <marker date="1522061385280" expanded="false" signature="7966:7977" ph=" { " />
-            <marker date="1522061385280" expanded="false" signature="7996:8002" ph=" }" />
-            <marker date="1522061385280" expanded="true" signature="8064:8143" ph="{...}" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -812,7 +596,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
           <caret line="17" column="11" lean-forward="false" selection-start-line="17" selection-start-column="11" selection-end-line="17" selection-end-column="11" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -820,7 +603,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
           <caret line="96" column="30" lean-forward="false" selection-start-line="96" selection-start-column="25" selection-end-line="96" selection-end-column="30" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -828,7 +610,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
           <caret line="8" column="12" lean-forward="false" selection-start-line="8" selection-start-column="12" selection-end-line="8" selection-end-column="12" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -836,7 +617,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-378">
           <caret line="15" column="37" lean-forward="false" selection-start-line="15" selection-start-column="37" selection-end-line="15" selection-end-column="37" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -844,7 +624,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
           <caret line="14" column="39" lean-forward="false" selection-start-line="14" selection-start-column="39" selection-end-line="14" selection-end-column="39" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -852,12 +631,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="146">
           <caret line="75" column="31" lean-forward="false" selection-start-line="75" selection-start-column="17" selection-end-line="75" selection-end-column="31" />
-          <folding>
-            <element signature="e#1393#1394#0" expanded="true" />
-            <element signature="e#1434#1435#0" expanded="true" />
-            <element signature="e#1563#1564#0" expanded="true" />
-            <element signature="e#1607#1608#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -865,18 +638,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="282">
           <caret line="41" column="33" lean-forward="true" selection-start-line="41" selection-start-column="33" selection-end-line="41" selection-end-column="33" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Logics/XorMultiLayerPerceptronSample.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="387">
-          <caret line="84" column="87" lean-forward="true" selection-start-line="83" selection-start-column="11" selection-end-line="84" selection-end-column="87" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Logics/XorMultiLayerPerceptronSample.java" />
     <entry file="jar://E:/Java/jdk1.8.0_151/src.zip!/java/util/Arrays.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="162">
@@ -889,7 +654,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="162">
           <caret line="121" column="20" lean-forward="false" selection-start-line="121" selection-start-column="20" selection-end-line="121" selection-end-column="20" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -897,7 +661,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
           <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -905,7 +668,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="282">
           <caret line="65" column="26" lean-forward="false" selection-start-line="65" selection-start-column="26" selection-end-line="65" selection-end-column="26" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -913,7 +675,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="52">
           <caret line="52" column="22" lean-forward="false" selection-start-line="52" selection-start-column="22" selection-end-line="52" selection-end-column="22" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -921,18 +682,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="192">
           <caret line="18" column="29" lean-forward="true" selection-start-line="18" selection-start-column="29" selection-end-line="18" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Tool/Solution.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="277">
-          <caret line="16" column="9" lean-forward="true" selection-start-line="16" selection-start-column="9" selection-end-line="16" selection-end-column="9" />
-          <folding>
-            <element signature="method#toString#0;class#Solution#0" expanded="false" />
-            <element signature="method#convertObjective#0;class#Solution#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -940,7 +689,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="322">
           <caret line="92" column="37" lean-forward="false" selection-start-line="92" selection-start-column="37" selection-end-line="92" selection-end-column="37" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -948,7 +696,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="391">
           <caret line="192" column="16" lean-forward="false" selection-start-line="192" selection-start-column="16" selection-end-line="192" selection-end-column="16" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -956,41 +703,24 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="382">
           <caret line="179" column="16" lean-forward="false" selection-start-line="179" selection-start-column="16" selection-end-line="179" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Tool/Utility.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Logics/NetParser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="780">
-          <caret line="44" column="0" lean-forward="true" selection-start-line="44" selection-start-column="0" selection-end-line="44" selection-end-column="0" />
-          <folding>
-            <element signature="method#calculateLayer#0;class#NetParser#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Logics/NeuralNet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="327">
-          <caret line="44" column="0" lean-forward="true" selection-start-line="44" selection-start-column="0" selection-end-line="44" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#NeuralNet#0;class#NeuralNet#0" expanded="false" />
-            <element signature="method#train#0;class#NeuralNet#0" expanded="false" />
-            <element signature="method#calculate#0;class#NeuralNet#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Tool/FileProcesser.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="183">
-          <caret line="63" column="52" lean-forward="false" selection-start-line="63" selection-start-column="52" selection-end-line="63" selection-end-column="52" />
+        <state relative-caret-position="317">
+          <caret line="142" column="1" lean-forward="true" selection-start-line="142" selection-start-column="1" selection-end-line="142" selection-end-column="1" />
           <folding>
             <element signature="method#readInput#0;class#FileProcesser#0" expanded="false" />
             <element signature="method#recordSolution#0;class#FileProcesser#0" expanded="false" />
-            <element signature="method#recordLayer#0;class#FileProcesser#0" expanded="false" />
             <element signature="method#closeFile#0;class#FileProcesser#0" expanded="false" />
             <element signature="method#getRandomFileName#0;class#FileProcesser#0" expanded="false" />
           </folding>
@@ -999,16 +729,29 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/input.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="3" column="5" lean-forward="false" selection-start-line="3" selection-start-column="5" selection-end-line="3" selection-end-column="5" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Main/Main.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/Logics/NeuralNet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="49" column="66" lean-forward="false" selection-start-line="49" selection-start-column="66" selection-end-line="49" selection-end-column="66" />
+        <state relative-caret-position="390">
+          <caret line="43" column="9" lean-forward="true" selection-start-line="40" selection-start-column="8" selection-end-line="43" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#NeuralNet#0;class#NeuralNet#0" expanded="false" />
+            <element signature="method#train#0;class#NeuralNet#0" expanded="false" />
+            <element signature="method#outputWeights#0;class#NeuralNet#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/weights.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1021,10 +764,31 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Tool/Utility.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/Tool/Solution.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="217">
-          <caret line="9" column="66" lean-forward="false" selection-start-line="9" selection-start-column="66" selection-end-line="9" selection-end-column="66" />
+        <state relative-caret-position="300">
+          <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#toString#0;class#Solution#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Logics/NetParser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="250">
+          <caret line="86" column="0" lean-forward="false" selection-start-line="86" selection-start-column="0" selection-end-line="86" selection-end-column="0" />
+          <folding>
+            <element signature="method#calculateInputNumber#0;class#NetParser#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Main/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1229">
+          <caret line="23" column="23" lean-forward="true" selection-start-line="22" selection-start-column="0" selection-end-line="23" selection-end-column="23" />
           <folding />
         </state>
       </provider>
