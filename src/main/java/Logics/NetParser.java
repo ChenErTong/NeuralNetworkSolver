@@ -2,6 +2,7 @@ package Logics;
 
 import Tool.Solution;
 
+import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -121,7 +122,7 @@ public class NetParser {
         for (int i = 0; i < weight.length; ++i){
             for (int j = 0; j < input_layer.length; ++j){
                 for (int k = 0; k <= node_last_index; ++k){
-                    cache[i][j][1][k] += input_layer[j][k] * weight[i][j];
+                    cache[i][j][1][k] = add(cache[i][j][1][k], multiply(input_layer[j][k], weight[i][j]));
                 }
             }
         }
@@ -129,10 +130,22 @@ public class NetParser {
         return cache;
     }
 
+    private double multiply(double a, double b){
+        BigDecimal bd1 = new BigDecimal(Double.toString(a));
+        BigDecimal bd2 = new BigDecimal(Double.toString(b));
+        return bd1.multiply(bd2).doubleValue();
+    }
+
+    private double add(double a, double b){
+        BigDecimal bd1 = new BigDecimal(Double.toString(a));
+        BigDecimal bd2 = new BigDecimal(Double.toString(b));
+        return bd1.add(bd2).doubleValue();
+    }
+
     private double[] addDoubleArray(double[] a, double[] b){
         double[] result = new double[a.length];
         for (int i = 0; i < a.length; ++i)
-            result[i] = a[i] + b[i];
+            result[i] = add(a[i], b[i]);
         return result;
     }
 }

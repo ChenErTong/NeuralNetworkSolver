@@ -16,7 +16,7 @@ public class Calculator {
     public double[] calculateOutout(String[] objective, double[] input){
         double[] output = new double[objective.length];
         for (int i = 0; i < output.length; ++i){
-            output[i] = calculateInput(objective[i], input);
+            output[i] = Math.max(calculateInput(objective[i], input), 0);
         }
         return output;
     }

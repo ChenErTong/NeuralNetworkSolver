@@ -23,18 +23,20 @@ public class NeuralNet implements LearningEventListener{
     public static void main(String[] args) {
         double[][] inputs = new double[1000][];
         double[][] outputs = new double[inputs.length][];
-        int[] layers = new int[]{2, 4, 1};
+        int[] layers = new int[]{3, 4, 1};
         Random rd = new Random();
 
         //人工模拟1000条训练数据 ，分界线为x2=x1+0.5
         for(int i = 0; i < inputs.length; i++){
             double x1 = rd.nextDouble();//随机产生一个分量
-            double x2 = rd.nextDouble();//随机产生另一个分量
-            inputs[i] = new double[]{x1, x2};
-            outputs[i] = new double[]{x1 > x2 + 0.5 ? 1.0 : 0.0};
+            double x2 = rd.nextDouble();//随机产生一个分量
+            double x3 = rd.nextDouble();//随机产生一个分量
+            inputs[i] = new double[]{x1, x2, x3};
+            outputs[i] = new double[]{x1 + x2 + x3 > 1.5 ? 1 : 0};
         }
         NeuralNet net = new NeuralNet();
 //        net.train(inputs, outputs, layers);
+//        FileProcesser.recordParameter(net.outputWeights(), Utility.WEIGHT_PATH);
 
         inputs = FileProcesser.readInput(Utility.INPUT_PATH).toArray(new double[1][1]);
 
@@ -42,7 +44,6 @@ public class NeuralNet implements LearningEventListener{
         for (int i = 0; i < inputs.length; i++) {
             System.out.println(Arrays.toString(inputs[i]) + ", " + Arrays.toString(outputs[i]));
         }
-//        net.outputWeights();
     }
 
     public NeuralNet(){
@@ -64,10 +65,9 @@ public class NeuralNet implements LearningEventListener{
         }
 
         MultiLayerPerceptron perceptron = new MultiLayerPerceptron(TransferFunctionType.RectifiedLinear, layers_config);
-        perceptron.setLearningRule(new BackPropagation());
-
-        LearningRule learningRule = network.getLearningRule();
+        BackPropagation learningRule = new BackPropagation();
         learningRule.addListener(this);
+        perceptron.setLearningRule(learningRule);
 
         perceptron.learn(set);
 
@@ -110,7 +110,7 @@ public class NeuralNet implements LearningEventListener{
 
     public void handleLearningEvent(LearningEvent event) {
         BackPropagation bp = (BackPropagation)event.getSource();
-        if (event.getEventType() == LearningEvent.Type.LEARNING_STOPPED)
+        if (event.getEventType() != LearningEvent.Type.LEARNING_STOPPED)
             System.out.println(bp.getCurrentIteration() + ". iteration : "+ bp.getTotalNetworkError());
     }
 }

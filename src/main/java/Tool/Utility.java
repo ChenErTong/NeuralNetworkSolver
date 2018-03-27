@@ -16,8 +16,9 @@ public class Utility {
     public static final Map<String, String> SYMBOLS;
     public static final Map<String, Integer> Priority;
 
-    public static boolean RECORD_TO_FILE = false;
-    public static boolean SHOW_GRAPH = false;
+    public static final boolean RECORD_TO_FILE = false;
+    public static final boolean SHOW_GRAPH = true;
+    public static final int DOUBLE_PRECISION = 4;
 
     static {
         SYMBOLS = new HashMap<>();
@@ -27,6 +28,7 @@ public class Utility {
         SYMBOLS.put("Or", "||");
         SYMBOLS.put("Less", "<");
         SYMBOLS.put("Greater", ">");
+        SYMBOLS.put("Equal", "=");
         SYMBOLS.put("LessEqual", "<=");
         SYMBOLS.put("GreaterEqual", ">=");
         SYMBOLS.put("Inequality", "");
@@ -38,8 +40,17 @@ public class Utility {
         Priority.put(">=", 3);
         Priority.put("<", 3);
         Priority.put("<=", 3);
+        Priority.put("=", 3);
         Priority.put("", 2);
-        Priority.put("&&", 1);
-        Priority.put("||", 0);
+        Priority.put("&&", 0);
+        Priority.put("||", 1);
+    }
+
+    public static String CONVERT_DOUBLE(double d){
+        if(DOUBLE_PRECISION == -1){
+            return Double.toString(d);
+        }else{
+            return String.format("%." + DOUBLE_PRECISION + "f", d);
+        }
     }
 }

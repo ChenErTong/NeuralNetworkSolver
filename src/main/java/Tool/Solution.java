@@ -76,12 +76,14 @@ public class Solution {
         StringBuilder sb = new StringBuilder();
         int i = 0;
         for (; i < ob.length - 1; ++i){
-            sb.append(ob[i]);
-            sb.append(" * X");
-            sb.append(i + 1);
-            sb.append(" + ");
+            if(ob[i] != 0){
+                sb.append(Utility.CONVERT_DOUBLE(ob[i]));
+                sb.append(" * X");
+                sb.append(i + 1);
+                sb.append(" + ");
+            }
         }
-        sb.append(ob[i]);
+        sb.append(Utility.CONVERT_DOUBLE(ob[i]));
         return sb.toString();
     }
 

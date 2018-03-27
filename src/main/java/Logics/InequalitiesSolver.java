@@ -34,7 +34,7 @@ public class InequalitiesSolver {
             if(!(formula = solveInequality(solution.getInput_number(), solution.getConstraint())).equals("Impossible")){
                 solution.setSolutionSet(formula);
                 listWithSolution.add(solution);
-                mapWithSolution.put(Arrays.toString(solution.getObjectives()), formula);
+                mapWithSolution.put(Arrays.toString(solution.getObjectives()), solution.getConstraint());
             }
         }
 
@@ -94,6 +94,7 @@ public class InequalitiesSolver {
 
     private String processFunction(MLFunction function){
         MLTK mltk = new MLTK(function.name, function.argCount);
+//        System.out.println(function.name + ": " + function.argCount);
         boolean higherPriority = higherPriority(mltk);
         stack.push(mltk);
         return higherPriority ? "" : "(";
@@ -116,7 +117,7 @@ public class InequalitiesSolver {
 
     private String processNumerical(double numerical){
 //        System.out.println("Numerical: " + numerical);
-        return process(String.format("%.2f", numerical));
+        return process(Utility.CONVERT_DOUBLE(numerical));
     }
 
     private String process(String name){
