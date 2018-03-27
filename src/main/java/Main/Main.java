@@ -66,13 +66,10 @@ public class Main {
 
     private static void runNet(List<double[]> inputs){
         NeuralNet net = new NeuralNet();
-        for (String weight: net.outputWeights()) {
-            System.out.print(weight);
-        }
 
         double[][] outputs = net.calculate(inputs.toArray(new double[0][0]));
         for (int i = 0; i < outputs.length; i++) {
-            System.out.println(Arrays.toString(inputs.get(i)) + ", " + Arrays.toString(outputs[i]));
+            System.out.println(Arrays.toString(inputs.get(i)) + ": " + Arrays.toString(outputs[i]));
         }
     }
 }

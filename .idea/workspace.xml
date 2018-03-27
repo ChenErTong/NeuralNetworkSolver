@@ -2,18 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f9c9a5e8-6abf-4a30-8fef-3c4c1355ccd1" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/input.txt" afterPath="$PROJECT_DIR$/input.txt" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Logics/NetParser.java" afterPath="$PROJECT_DIR$/src/main/java/Logics/NetParser.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Logics/NeuralNet.java" afterPath="$PROJECT_DIR$/src/main/java/Logics/NeuralNet.java" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Main/Main.java" afterPath="$PROJECT_DIR$/src/main/java/Main/Main.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Tool/FileProcesser.java" afterPath="$PROJECT_DIR$/src/main/java/Tool/FileProcesser.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Tool/Solution.java" afterPath="$PROJECT_DIR$/src/main/java/Tool/Solution.java" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Logics/NetParser.class" afterPath="$PROJECT_DIR$/target/classes/Logics/NetParser.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Logics/NeuralNet.class" afterPath="$PROJECT_DIR$/target/classes/Logics/NeuralNet.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Main/Main.class" afterPath="$PROJECT_DIR$/target/classes/Main/Main.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Tool/FileProcesser.class" afterPath="$PROJECT_DIR$/target/classes/Tool/FileProcesser.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Tool/Solution.class" afterPath="$PROJECT_DIR$/target/classes/Tool/Solution.class" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -55,8 +44,8 @@
       <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/Main/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1229">
-              <caret line="23" column="23" lean-forward="true" selection-start-line="22" selection-start-column="0" selection-end-line="23" selection-end-column="23" />
+            <state relative-caret-position="331">
+              <caret line="71" column="66" lean-forward="false" selection-start-line="71" selection-start-column="66" selection-end-line="71" selection-end-column="66" />
               <folding />
             </state>
           </provider>
@@ -398,7 +387,7 @@
       <workItem from="1522032990558" duration="2834000" />
       <workItem from="1522039397656" duration="8591000" />
       <workItem from="1522058698806" duration="22251000" />
-      <workItem from="1522119362279" duration="7826000" />
+      <workItem from="1522119362279" duration="7927000" />
     </task>
     <task id="LOCAL-00001" summary="chance">
       <created>1521871589630</created>
@@ -418,7 +407,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="153581000" />
+    <option name="totallyTimeSpent" value="153682000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
@@ -432,7 +421,7 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33295584" sideWeight="0.50214595" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26613817" sideWeight="0.49785408" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26613817" sideWeight="0.49785408" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -787,8 +776,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Main/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1229">
-          <caret line="23" column="23" lean-forward="true" selection-start-line="22" selection-start-column="0" selection-end-line="23" selection-end-column="23" />
+        <state relative-caret-position="331">
+          <caret line="71" column="66" lean-forward="false" selection-start-line="71" selection-start-column="66" selection-end-line="71" selection-end-column="66" />
           <folding />
         </state>
       </provider>
