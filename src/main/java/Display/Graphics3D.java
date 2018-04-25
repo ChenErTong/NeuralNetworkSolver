@@ -1,12 +1,12 @@
 package Display;
 
-import Display.Graphics;
+import Tool.Solution;
 import com.wolfram.jlink.KernelLink;
 
-import java.util.Map;
+import java.util.List;
 
 public class Graphics3D extends Graphics {
-    public Graphics3D(Map<String, String> solutions, KernelLink kl, int[][] range){
+    public Graphics3D(List<Solution> solutions, KernelLink kl, int[][] range){
         super(kl, range);
         WINDOW_WIDTH = 1200;
         init(solutions);
@@ -34,5 +34,8 @@ public class Graphics3D extends Graphics {
         sb.append(range[2][1]);
         sb.append("}]");
         return sb.toString();
+    }
+
+    protected void preprocess(List<Solution> solutions){
     }
 }

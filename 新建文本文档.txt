@@ -1,8 +1,0 @@
-z3
-scipy linprog
-sympy
-LP_Solver
-symja
-Ptolemy 2
-JOptimizer
-mathematica

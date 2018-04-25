@@ -1,11 +1,15 @@
 package Display;
 
-import com.wolfram.jlink.*;
+import Tool.FileProcesser;
+import Tool.Solution;
+import com.wolfram.jlink.KernelLink;
+import com.wolfram.jlink.MathCanvas;
 
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.*;
-import java.util.Map;
+import java.awt.event.WindowAdapter;
+import java.awt.event.WindowEvent;
+import java.util.List;
 
 public abstract class Graphics extends JFrame {
 
@@ -15,6 +19,8 @@ public abstract class Graphics extends JFrame {
     private final static int PADDING = 10;
     private String formula_prefix;
     private String formula_postfix;
+    protected String[] formula_infix;
+    protected String[] objectives;
 
     int WINDOW_WIDTH;
 
@@ -24,12 +30,8 @@ public abstract class Graphics extends JFrame {
         kernelLink = kl;
     }
 
-    void init(Map<String, String> solutions){
-        String[] objectives = new String[solutions.size()];
-        int index = 0;
-        for (String objective: solutions.keySet()) {
-            objectives[index++] = objective;
-        }
+    void init(List<Solution> solutions){
+        preprocess(solutions);
 
         setLayout(null);
         setTitle("Neural Network Parser");
@@ -55,20 +57,17 @@ public abstract class Graphics extends JFrame {
         add(mathCanvas);
 
         JList<String> jList = new JList<>();
-        jList.setPreferredSize(new Dimension(200, 100));
         jList.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
         jList.setListData(objectives);
         jList.addListSelectionListener(e -> {
             if(e.getValueIsAdjusting()){
-                int index1 = jList.getSelectedIndex();
-                ListModel<String> listModel = jList.getModel();
-                setMathCommand(solutions.get(listModel.getElementAt(index1)));
+                setMathCommand(formula_infix[jList.getSelectedIndex()]);
             }
         });
         jList.setSelectedIndex(0);
         jList.setBounds(WINDOW_HEIGHT, PADDING, WINDOW_WIDTH - WINDOW_HEIGHT - PADDING * 2, WINDOW_HEIGHT - PADDING * 6);
         add(jList);
-        setMathCommand(solutions.get(objectives[0]));
+        setMathCommand(formula_infix[0]);
 
         kernelLink.evaluateToInputForm("Needs[\"" + KernelLink.PACKAGE_CONTEXT + "\"]", 0);
         kernelLink.evaluateToInputForm("ConnectToFrontEnd[]", 0);
@@ -81,11 +80,15 @@ public abstract class Graphics extends JFrame {
 
     protected abstract String constructPrefix();
 
+    protected abstract void preprocess(List<Solution> solutions);
+
     private void setMathCommand(String command){
         mathCanvas.setMathCommand(convertToRegionPlotFormula(command));
     }
 
     private String convertToRegionPlotFormula(String formula){
-        return formula_prefix + formula + formula_postfix;
+        String command = formula_prefix + formula + formula_postfix;
+        FileProcesser.writeToFile( "\n" + command + "\n");
+        return command;
     }
 }

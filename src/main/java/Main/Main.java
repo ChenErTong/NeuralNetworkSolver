@@ -4,44 +4,25 @@ import Logics.Calculator;
 import Logics.InequalitiesSolver;
 import Logics.NetParser;
 import Logics.NeuralNet;
-import Tool.Solution;
 import Tool.FileProcesser;
+import Tool.Solution;
 import Tool.Utility;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
 public class Main {
     public static void main(String[] args){
-//        test();
-//        System.exit(0);
+        runCalculator(Utility.INPUT_PATH, runSolver(Utility.WEIGHT_PATH));
+    }
 
-        long openTime, closeTime;
-        openTime = System.currentTimeMillis();
-        List<double[][]> weights = FileProcesser.readParameter(Utility.WEIGHT_PATH);
-        List<double[]> inputs = FileProcesser.readInput(Utility.INPUT_PATH);
+    private static List<Solution> runSolver(String weight_path){
+        List<double[][]> weights = FileProcesser.readParameter(weight_path);
 
         for (double[][] weight: weights) FileProcesser.recordLayer(weight, "weight");
         FileProcesser.writeToFile("\n");
 
-//        runNet(inputs);
-        runSolver(weights, inputs);
-
-        closeTime = System.currentTimeMillis();
-        FileProcesser.writeToFile("\nFinish processing the program. Total Duratoin: " + (closeTime - openTime) / 1000.0 + "sec.");
-        FileProcesser.closeFile();
-    }
-
-    private static void test(){
-        String constraint = "-0.10328118855979174 * X1 + -0.05012250887588361 * X2 + 0.3111099132609237 * X3 + -0.03294619970281937 > 0 && " +
-                "3.045782833549556 * X1 + 2.98287477081037 * X2 + 2.9530057302209523 * X3 + -4.523606517610982 > 0 && " +
-                "-0.5326376419620387 * X1 + -0.6929153260164957 * X2 + -0.5450808952511463 * X3 + 0.7680458780188641 > 0 && " +
-                "0.6527082065569729 * X1 + 0.2539050232858495 * X2 + -0.1942019675675709 * X3 + 0.10899790676739256 > 0";
-        InequalitiesSolver solver = InequalitiesSolver.instance;
-        System.out.println(solver.solveInequality(3, constraint));
-    }
-
-    private static void runSolver(List<double[][]> weights, List<double[]> inputs){
         long startTime, endTime;
 
         FileProcesser.writeToFile("Begin parsing the network.");
@@ -50,16 +31,30 @@ public class Main {
         List<Solution> solutions = parser.parse(weights);
         endTime = System.currentTimeMillis();
         FileProcesser.writeToFile("Succeed in parsing the network in " + (endTime - startTime) / 1000.0 + "sec.\n");
-        FileProcesser.recordSolution(solutions);
 
         FileProcesser.writeToFile("Begin solving the inequalities.");
-        InequalitiesSolver solver = InequalitiesSolver.instance;
+        InequalitiesSolver solver = new InequalitiesSolver();
         startTime = System.currentTimeMillis();
-        solutions = solver.solveInequalities(solutions, Utility.SHOW_GRAPH);
+        solutions = solver.solveInequalities(solutions);
         endTime = System.currentTimeMillis();
         FileProcesser.writeToFile("===========================================\n" +
                 "Succeed in solving the inequalities in " + (endTime - startTime) / 1000.0 + "sec.\n");
-        FileProcesser.recordSolution(solutions);
+
+        startTime = System.currentTimeMillis();
+        solver.showGraphics(solutions);
+        endTime = System.currentTimeMillis();
+        FileProcesser.writeToFile("\n===========================================\n" +
+                "Succeed in showing the graphics in " + (endTime - startTime) / 1000.0 + "sec.\n");
+
+        solver.close();
+
+        return solutions;
+    }
+
+    private static void runCalculator(String input_path, List<Solution> solutions){
+        List<double[]> inputs = FileProcesser.readInput(input_path);
+
+        long startTime, endTime;
 
         Calculator calculator = new Calculator();
         FileProcesser.writeToFile("Begin calculating new inputs:\n");
@@ -78,12 +73,35 @@ public class Main {
         FileProcesser.writeToFile("Succeed in calculating new inputs in " + (endTime - startTime) / 1000.0 + "sec.\n");
     }
 
-    private static void runNet(List<double[]> inputs){
+    private static void runNet(String input_path){
+        List<double[]> inputs = FileProcesser.readInput(input_path);
+
         NeuralNet net = new NeuralNet();
 
         double[][] outputs = net.calculate(inputs.toArray(new double[0][0]));
         for (int i = 0; i < outputs.length; i++) {
             System.out.println(Arrays.toString(inputs.get(i)) + ": " + Arrays.toString(outputs[i]));
         }
+    }
+
+    private static List<double[][]> constructWeights(String layer_number){
+        String[] ls = layer_number.split(" ");
+        int[] ns = new int[ls.length + 1];
+        ns[0] = 2;
+        for (int i = 0; i < ls.length; ++i){
+            ns[i + 1] = Integer.parseInt(ls[i]);
+        }
+        List<double[][]> weights = new ArrayList<>();
+
+        for (int i = 1; i < ns.length; ++i){
+            double[][] weight = new double[ns[i]][ns[i - 1] + 1];
+            for (int j = 0; j < weight.length; ++j)
+                for (int k = 0; k < weight[0].length; ++k)
+                    weight[j][k] = 1 - Math.random();
+
+            weights.add(weight);
+        }
+
+        return weights;
     }
 }

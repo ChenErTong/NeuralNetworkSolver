@@ -10,35 +10,37 @@ import org.neuroph.core.data.DataSetRow;
 import org.neuroph.core.events.LearningEvent;
 import org.neuroph.core.events.LearningEventListener;
 import org.neuroph.core.exceptions.NeurophException;
-import org.neuroph.core.learning.LearningRule;
 import org.neuroph.nnet.MultiLayerPerceptron;
 import org.neuroph.nnet.learning.BackPropagation;
 import org.neuroph.util.TransferFunctionType;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+import java.util.Random;
 
 public class NeuralNet implements LearningEventListener{
     private NeuralNetwork network;
 
     public static void main(String[] args) {
-        double[][] inputs = new double[1000][];
-        double[][] outputs = new double[inputs.length][];
-        int[] layers = new int[]{3, 4, 1};
-        Random rd = new Random();
+        int[] layers = new int[]{2, 3, 1};
 
-        //人工模拟1000条训练数据 ，分界线为x2=x1+0.5
+        Random rd = new Random();
+        double[][] inputs = new double[100][];
+        double[][] outputs = new double[inputs.length][];
+        //人工模拟5000条训练数据 ，分界线为x1+x2+x3=1.54
         for(int i = 0; i < inputs.length; i++){
             double x1 = rd.nextDouble();//随机产生一个分量
             double x2 = rd.nextDouble();//随机产生一个分量
-            double x3 = rd.nextDouble();//随机产生一个分量
-            inputs[i] = new double[]{x1, x2, x3};
-            outputs[i] = new double[]{x1 + x2 + x3 > 1.5 ? 1 : 0};
+            inputs[i] = new double[]{x1, x2};
+            outputs[i] = new double[]{x1 + x2 >= 1 ? 1 : 0};
         }
+
         NeuralNet net = new NeuralNet();
 //        net.train(inputs, outputs, layers);
-//        FileProcesser.recordParameter(net.outputWeights(), Utility.WEIGHT_PATH);
+        FileProcesser.recordParameter(net.outputWeights(), Utility.WEIGHT_PATH);
 
-        inputs = FileProcesser.readInput(Utility.INPUT_PATH).toArray(new double[1][1]);
+//        inputs = FileProcesser.readInput(Utility.INPUT_PATH).toArray(new double[1][1]);
 
         outputs = net.calculate(inputs);
         for (int i = 0; i < inputs.length; i++) {
@@ -59,16 +61,20 @@ public class NeuralNet implements LearningEventListener{
             return false;
         }
 
+        //构造神经网络，并将ReLU函数作为其激活函数
+        MultiLayerPerceptron perceptron = new MultiLayerPerceptron(TransferFunctionType.RectifiedLinear, layers_config);
+        //将其学习规则设置为反向传播算法，配置BP神经网络
+        BackPropagation learningRule = new BackPropagation();
+        perceptron.setLearningRule(learningRule);
+
+        learningRule.addListener(this);
+
+        //设置每组数据集输入数据和输出数据的维数
         DataSet set = new DataSet(inputs[0].length, outputs[0].length);
         for (int i = 0; i < inputs.length; ++i){
             set.addRow(new DataSetRow(inputs[i], outputs[i]));
         }
-
-        MultiLayerPerceptron perceptron = new MultiLayerPerceptron(TransferFunctionType.RectifiedLinear, layers_config);
-        BackPropagation learningRule = new BackPropagation();
-        learningRule.addListener(this);
-        perceptron.setLearningRule(learningRule);
-
+        //对神经网络进行训练
         perceptron.learn(set);
 
         perceptron.save(Utility.NETWORK_PATH);

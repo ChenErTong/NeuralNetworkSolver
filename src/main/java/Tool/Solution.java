@@ -1,6 +1,5 @@
 package Tool;
 
-import java.util.Arrays;
 import java.util.List;
 
 public class Solution {
@@ -10,6 +9,11 @@ public class Solution {
     private String constraint;
     private String solutionSet;
 
+    /**
+     * 构造器
+     * @param ob 存储线性表达式组的数组
+     * @param cons 存储约束的线性不等式方程组的数组
+     */
     public Solution(double[][] ob, List<double[]> cons){
         input_number = ob[0].length - 1;
         objectives = new String[ob.length - 1];
@@ -44,10 +48,6 @@ public class Solution {
 
     public String getConstraint(){
         return constraint;
-    }
-
-    public String getSolutionSet(){
-        return solutionSet;
     }
 
     public String[] getConstraints(){

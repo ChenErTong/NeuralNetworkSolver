@@ -82,10 +82,8 @@ public class FileProcesser {
         return weights;
     }
 
-    public static void recordSolution(List<Solution> solutions){
-        for (int i = 0; i < solutions.size(); ++i){
-            writeToFile("Solution " + (i + 1) + ": \n" + solutions.get(i).toString() + "\n\n");
-        }
+    public static void recordSolution(Solution solution, int index){
+        writeToFile("Solution " + index + ": \n" + solution.toString() + "\n\n");
     }
 
     public static void recordLayer(double[][] layer, String comment){
